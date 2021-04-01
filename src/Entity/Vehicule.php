@@ -62,6 +62,36 @@ class Vehicule
      */
     private $carburant;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nom_proprietaire;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prenom_proprietaire;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $tel_proprietaire;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $type_vehicule;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ville;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $disponibilite;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -171,6 +201,78 @@ class Vehicule
     public function setCarburant(string $carburant): self
     {
         $this->carburant = $carburant;
+
+        return $this;
+    }
+
+    public function getNomProprietaire(): ?string
+    {
+        return $this->nom_proprietaire;
+    }
+
+    public function setNomProprietaire(string $nom_proprietaire): self
+    {
+        $this->nom_proprietaire = $nom_proprietaire;
+
+        return $this;
+    }
+
+    public function getPrenomProprietaire(): ?string
+    {
+        return $this->prenom_proprietaire;
+    }
+
+    public function setPrenomProprietaire(string $prenom_proprietaire): self
+    {
+        $this->prenom_proprietaire = $prenom_proprietaire;
+
+        return $this;
+    }
+
+    public function getTelProprietaire(): ?string
+    {
+        return $this->tel_proprietaire;
+    }
+
+    public function setTelProprietaire(string $tel_proprietaire): self
+    {
+        $this->tel_proprietaire = $tel_proprietaire;
+
+        return $this;
+    }
+
+    public function getTypeVehicule(): ?string
+    {
+        return $this->type_vehicule;
+    }
+
+    public function setTypeVehicule(string $type_vehicule): self
+    {
+        $this->type_vehicule = $type_vehicule;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(string $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getDisponibilite(): ?string
+    {
+        return $this->disponibilite;
+    }
+
+    public function setDisponibilite(string $disponibilite): self
+    {
+        $this->disponibilite = $disponibilite;
 
         return $this;
     }

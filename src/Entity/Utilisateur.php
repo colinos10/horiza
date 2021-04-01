@@ -42,6 +42,11 @@ class Utilisateur
      */
     private $role = [];
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $tel;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Utilisateur
     public function setRole(array $role): self
     {
         $this->role = $role;
+
+        return $this;
+    }
+
+    public function getTel(): ?string
+    {
+        return $this->tel;
+    }
+
+    public function setTel(string $tel): self
+    {
+        $this->tel = $tel;
 
         return $this;
     }
