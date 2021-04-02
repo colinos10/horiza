@@ -5,11 +5,13 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -35,9 +37,25 @@ class RegistrationFormType extends AbstractType
                 ]
             ])
             ->add('tel', TextType::class)
-            ->add('img1', TextType::class)
+            ->add('img1', FileType::class, [
+                'required' => false,
+                'help' => 'png, jpeg, pdf - 2 Mo maximum',
+                'constraints' => [
+                    new File([
+                        'maxSize' => '2048k',
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpg',
+                            'image/jpeg',
+                            'image/jp2',
+                            'application/pdf'
+                        ],
+                        'mimeTypesMessage' => 'Merci de sélectionner un fichier au format PNG, JPG, JPEG, JP2 ou PDF'
+                    ])
+                ]
+            ])
             ->add('adresse', TextType::class)
-            ->add('code_postal', IntegerType::class)
+            ->add('code_postal', TextType::class)
             ->add('ville', TextType::class)
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
