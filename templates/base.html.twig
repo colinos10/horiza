@@ -13,7 +13,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <link rel="icon" type="img/png" href="../public/img/logo.png" />
+        <link rel="icon" type="img/png" href="{{ asset('img/logo.png') }}" />
 
         {% block stylesheets %}{% endblock %}
 
@@ -21,31 +21,8 @@
 
         {% block body %}{% endblock %}
 
-    <body>
-        <footer class="container-fluid bg-info">
-            <div class="row text-center d-flex justify-content-around" href="http://localhost/horiza/public/">
-                <div type="button" >
-                    <p>Partir</p>
-                    <i class="fab fa-sistrix"></i>
-                </div>
-                {# <div type="button">
-                    <p>Favoris</p>
-                    <i class="far fa-heart"></i>
-                </div> #}
-                <div type="button">
-                    <p>Publier</p>
-                    <i class="far fa-comment"></i>
-                </div>
-                <div type="button">
-                    <p>Voyages</p>
-                    <i class="fas fa-shuttle-van"></i>
-                </div>
-                <div type="button">
-                    <p>Mon compte</p>
-                    <i class="far fa-user"></i>
-                </div>
-            </div>
-        </footer>
+  
+        
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -54,7 +31,5 @@
         <script src="https://kit.fontawesome.com/36a2677ed6.js" crossorigin="anonymous"></script>
 
         {% block javascripts %}{% endblock %}
-    
-    </body>
     
 </html>

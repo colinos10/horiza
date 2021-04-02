@@ -4,20 +4,98 @@
 
 {% block body %}
 
-    <header class"container-fluid bg-info">
+    <header>
         <a href="http://localhost/horiza/public/"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo"/></a>
-        <div class="example-wrapper">
-        </div>
-        <form class="col ml-3 mb-2" role="search">
-                <label for="main-q" class="visually-hidden"></label>
-                <input type="search" placeholder="Choisissez un type de véhicule">
-            </form>
-            <form class="col ml-3" role="search">
-                <label for="main-q" class="visually-hidden"></label>
-                <input type="search" placeholder="Où voulez vous louer ?">
-            </form>
+        
+        <div class="pos-f-t">
 
-            <button class="text-right text-dark">Rechercher</button>
+            <nav class="navbar navbar-dark bg-info">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-info p-4">
+                  <a class="text-white">Rechercher</a>
+                  <a class="text-white">Louer un véhicule</a>
+                  <a class="text-white">Déposer une annonce</a>
+                  <a class="text-white">S'inscrire</a>
+                  <a class="text-white">Se connecter</a>
+                  
+                </div>
+              </div>
+
+          </div>
     </header>
 
+    <main class"container-fluid bg-info">
+        <form class="col ml-3 mb-2" role="search">
+            <div>
+                <label for="main-q" class="visually-hidden">Type de véhicule</label>
+                <select name="" id="">
+                    <option value="">Choisissez un type de véhicule dans la liste</option>
+                    <option value="">Camping-car</option>
+                    <option value="">Van</option>
+                </select>
+            </div>
+            <div>
+                <label for="main-q" class="visually-hidden">Où voulez-vous louer ?</label>
+                <select name="" id="">
+                    <option value="">Choisissez une ville dans la liste</option>
+                    <option value="">Lille</option>
+                    <option value="">Saint-Quentin</option>
+                    <option value="">Paris</option>
+                    <option value="">Rouen</option>
+                    <option value="">Caen</option>
+                    <option value="">Strasbourg</option>
+                    <option value="">Troyes</option>
+                    <option value="">Rennes</option>
+                    <option value="">Brest</option>
+                    <option value="">Dijon</option>
+                    <option value="">Orléans</option>
+                    <option value="">Tours</option>
+                    <option value="">Nantes</option>
+                    <option value="">Clermont-Ferrand</option>
+                    <option value="">Lyon</option>
+                    <option value="">Poitiers</option>
+                    <option value="">Brive-la-Gaillarde</option>
+                    <option value="">Bordeaux</option>
+                    <option value="">Montpellier</option>
+                    <option value="">Toulouse</option>
+                    <option value="">Avignon</option>
+                    <option value="">Marseille</option>
+                    <option value="">Ajaccio</option>
+                </select>
+            </div>
+                <button class="text-right text-dark">Rechercher</button>
+        </form>    
+    </main>
+
+    <footer class="container-fluid bg-info">
+        <div class="row text-center d-flex justify-content-around" href="http://localhost/horiza/public/">
+            <div type="button" >
+                <p>Rechercher</p>
+                <i class="fab fa-sistrix"></i>
+            </div>
+            {# <div type="button">
+                <p>Favoris</p>
+                <i class="far fa-heart"></i>
+            </div> #}
+            <div type="button">
+                <p>Publier</p>
+                <i class="far fa-comment"></i>
+            </div>
+            {# <div type="button">
+                <p>Voyages</p>
+                <i class="fas fa-shuttle-van"></i>
+            </div> #}
+            <div type="button">
+                <p>Mon compte</p>
+                <i class="far fa-user"></i>
+            </div>
+        </div>
+    </footer>
+
 {% endblock %}
+
