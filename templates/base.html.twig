@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Horiza Network">
-        <meta name="description" content="Site d'annonces immobilières">
+        <meta name="description" content="Site Horiza">
 
         <title>Horiza - {% block title %}{% endblock %}</title>
 
@@ -18,20 +18,38 @@
         {% block stylesheets %}{% endblock %}
 
     </head>
-    <body>
-        
+
         {% block body %}{% endblock %}
 
+        <header class="container-fluid bg-info">
+            <form class="col ml-3 mb-2" role="search">
+                <label for="main-q" class="visually-hidden"></label>
+                <input type="search" placeholder="Choisissez un type de véhicule">
+            </form>
+            <form class="col ml-3" role="search">
+                <label for="main-q" class="visually-hidden"></label>
+                <input type="search" placeholder="Où voulez vous louer ?">
+            </form>
+
+            <button class="text-right text-dark">Rechercher</button>
+        </header>
+    <body>
+        
+        <main>
+            <p>Ici sera le main</p>
+        </main>
+
+
         <footer class="container-fluid bg-info">
-            <div class="row text-center d-flex justify-content-around" href="http://localhost/horiza/public/#">
+            <div class="row text-center d-flex justify-content-around" href="http://localhost/horiza/public/">
                 <div type="button" >
                     <p>Partir</p>
                     <i class="fab fa-sistrix"></i>
                 </div>
-                <div type="button">
+                {# <div type="button">
                     <p>Favoris</p>
                     <i class="far fa-heart"></i>
-                </div>
+                </div> #}
                 <div type="button">
                     <p>Publier</p>
                     <i class="far fa-comment"></i>
