@@ -9,7 +9,10 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Rollerworks\Component\PasswordStrength\Validator\Constraints\PasswordStrength;
@@ -19,12 +22,20 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            // ->add('nom', NomType::class)
+            ->add('civilite', TextType::class)
+            ->add('prenom', TextType::class)
+            ->add('nom', TextType::class)
+            ->add('date_naissance', DateType::class)
             ->add('email', EmailType::class, [
                 'attr' => [
                     'placeholder' => 'Ex.: prenom.nom@domaine.com'
                 ]
             ])
+            ->add('tel', TextType::class)
+            ->add('img1', TextType::class)
+            ->add('adresse', TextType::class)
+            ->add('code_postal', IntegerType::class)
+            ->add('ville', TextType::class)
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'label' => 'J\'accepte les termes et conditions',
