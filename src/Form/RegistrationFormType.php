@@ -25,7 +25,10 @@ class RegistrationFormType extends AbstractType
             ->add('civilite', TextType::class)
             ->add('prenom', TextType::class)
             ->add('nom', TextType::class)
-            ->add('date_naissance', DateType::class)
+            ->add('date_naissance', DateType::class, [
+                'widget' => 'choice',
+                'years' => range(1970, 2021)
+            ])
             ->add('email', EmailType::class, [
                 'attr' => [
                     'placeholder' => 'Ex.: prenom.nom@domaine.com'
