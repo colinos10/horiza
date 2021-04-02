@@ -4,10 +4,20 @@
 
 {% block body %}
 
-    <header>
+    <header class"container-fluid bg-info">
         <a href="http://localhost/horiza/public/"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo"/></a>
         <div class="example-wrapper">
         </div>
+        <form class="col ml-3 mb-2" role="search">
+                <label for="main-q" class="visually-hidden"></label>
+                <input type="search" placeholder="Choisissez un type de véhicule">
+            </form>
+            <form class="col ml-3" role="search">
+                <label for="main-q" class="visually-hidden"></label>
+                <input type="search" placeholder="Où voulez vous louer ?">
+            </form>
+
+            <button class="text-right text-dark">Rechercher</button>
     </header>
 
 {% endblock %}
