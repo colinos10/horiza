@@ -26,6 +26,17 @@ class VehiculeController extends AbstractController
     }
 
     /**
+    * @Route("/vehicules", name="vehicules")
+    */
+   public function vehicules(VehiculeRepository $vehiculeRepository)
+   {
+       $vehicules = $vehiculeRepository->findAll();
+       return $this->render('home/vehicules.html.twig', [
+           'vehicules' => $vehicules
+       ]);
+   }
+
+    /**
      * @Route("/admin/vehicules", name="admin_vehicules")
      */
     public function index(VehiculeRepository $vehiculeRepository): Response
