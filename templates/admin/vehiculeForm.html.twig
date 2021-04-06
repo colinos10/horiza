@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}véhicule - formulaire{% endblock %}
+
+{% block body %}
+
+    <h1>Formulaire - Véhicule</h1>
+
+    <div>
+        {{ form_start(vehiculeForm) }}
+        {{ form_end(vehiculeForm) }}
+    </div>
+
+    <div class="text-center pb-5">
+        <a href="{{ path('admin_vehicules') }}" class="btn btn-danger">Annuler</a>
+    </div>
+
+{% endblock %}

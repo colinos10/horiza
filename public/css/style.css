@@ -5,4 +5,38 @@
     padding: 0;
     list-style-type: none;
     text-decoration: none;
-}
+  }
+  
+  /* ******************* HEADER ************************ */
+  
+  /* zone logo  pur*/
+  .logo {
+    width: 20%;
+  }
+  
+  /* zone de la balise a  */
+  .liens-a {
+    display: contents;
+  }
+  
+  /* la classe nav */
+  .navbar {
+    align-items: end;
+    display: flex;
+  }
+  
+  /* la classe bouton */
+  .navbar-toggler {
+    position: relative;
+  }
+  
+  /* div menu burger */
+  .bg-info {
+    background-color: #01c5c4 !important;
+  }
+  
+  /* / texte du menu burger */
+  .text-white {
+    display: flex;
+    flex-direction: row-reverse;
+  }
