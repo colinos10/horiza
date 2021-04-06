@@ -65,7 +65,7 @@ class __TwigTemplate_62ec79c13428e2dddf8575f4e1885a46dea709304371d4540172689abc3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Inscrivez-vous et louer votre Camping-car | Horiza ";
+        echo "Inscrivez-vous et louer votre Camping-car";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -190,7 +190,7 @@ class __TwigTemplate_62ec79c13428e2dddf8575f4e1885a46dea709304371d4540172689abc3
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Inscrivez-vous et louer votre Camping-car | Horiza {% endblock %}
+{% block title %}Inscrivez-vous et louer votre Camping-car{% endblock %}
 
 {% block body %}
     {% for flashError in app.flashes('verify_email_error') %}

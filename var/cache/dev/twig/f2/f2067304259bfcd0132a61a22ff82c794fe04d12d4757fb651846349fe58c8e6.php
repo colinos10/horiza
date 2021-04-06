@@ -302,8 +302,6 @@ class __TwigTemplate_8a7b16ae1fd035837ec73061af2174e110384cd8ef3f89e42478c3c4a85
         </div>
     </footer>
 
-{% endblock %}
-
-", "home/index.html.twig", "C:\\xampp\\htdocs\\horiza\\templates\\home\\index.html.twig");
+{% endblock %}", "home/index.html.twig", "C:\\xampp\\htdocs\\horiza\\templates\\home\\index.html.twig");
     }
 }

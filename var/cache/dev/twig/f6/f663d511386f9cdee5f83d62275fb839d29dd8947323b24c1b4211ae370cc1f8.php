@@ -65,7 +65,7 @@ class __TwigTemplate_55bbf48b5279ce27b235af0c285a34a5d63b2ab7062fa1827da8c5a5661
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Connectez-vous et louer un Camping-car ! | Horiza ";
+        echo "Connectez-vous et louer un Camping-car !";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -112,29 +112,35 @@ class __TwigTemplate_55bbf48b5279ce27b235af0c285a34a5d63b2ab7062fa1827da8c5a5661
     ";
         }
         // line 16
-        echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Connexion</h1>
-    <label for=\"inputEmail\">Email</label>
-    <input type=\"email\" value=\"";
-        // line 19
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 19, $this->source); })()), "html", null, true);
-        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
-    <label for=\"inputPassword\">Mot de passe</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
-
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"";
+        echo "    <header class=\"container-fluid text-center bg-info pt-5 pb-5\">
+        <h1 class=\"text-center\">Horiza</h1>
+    </header>
+        <main class=\"container-fluid pl-5 mt-5\">
+            <h3 class=\"text-center mt-3\">Connexion</h3>
+                <div class=\"form-group row\">
+                    <label class=\"col-sm-2 col-form-label\" for=\"email\" placeholder=\"email@example.com\">Email</label>
+                    <div class=\"col-sm-10\">
+                    <input type=\"email\" value=\"";
         // line 24
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 24, $this->source); })()), "html", null, true);
+        echo "\" name=\"email\" id=\"email\" class=\"form-control\" required>
+                </div>
+                <div class=\"form-group row\">
+                    <label for=\"password\" class=\"col-sm-2 col-form-label\">Mot de passe</label>
+                    <div class=\"col-sm-10\">
+                    <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Mot de passe\">
+                    </div>
+                </div>
+                <input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
-        echo "\"
-    >
+        echo "\">
+        </main>
 
     ";
-        // line 37
+        // line 45
         echo "
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Je me connecte !
-    </button>
+    <button type=\"button\" class=\"btn btn-primary\">Je me connecte</button>
 </form>
 ";
         
@@ -157,14 +163,14 @@ class __TwigTemplate_55bbf48b5279ce27b235af0c285a34a5d63b2ab7062fa1827da8c5a5661
 
     public function getDebugInfo()
     {
-        return array (  134 => 37,  128 => 24,  120 => 19,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  142 => 45,  136 => 32,  125 => 24,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Connectez-vous et louer un Camping-car ! | Horiza {% endblock %}
+{% block title %}Connectez-vous et louer un Camping-car !{% endblock %}
 
 {% block body %}
 <form method=\"post\">
@@ -177,16 +183,24 @@ class __TwigTemplate_55bbf48b5279ce27b235af0c285a34a5d63b2ab7062fa1827da8c5a5661
             Vous êtes connectés en tant que {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Se déconnecter</a>
         </div>
     {% endif %}
-
-    <h1 class=\"h3 mb-3 font-weight-normal\">Connexion</h1>
-    <label for=\"inputEmail\">Email</label>
-    <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
-    <label for=\"inputPassword\">Mot de passe</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
-
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"{{ csrf_token('authenticate') }}\"
-    >
+    <header class=\"container-fluid text-center bg-info pt-5 pb-5\">
+        <h1 class=\"text-center\">Horiza</h1>
+    </header>
+        <main class=\"container-fluid pl-5 mt-5\">
+            <h3 class=\"text-center mt-3\">Connexion</h3>
+                <div class=\"form-group row\">
+                    <label class=\"col-sm-2 col-form-label\" for=\"email\" placeholder=\"email@example.com\">Email</label>
+                    <div class=\"col-sm-10\">
+                    <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"email\" class=\"form-control\" required>
+                </div>
+                <div class=\"form-group row\">
+                    <label for=\"password\" class=\"col-sm-2 col-form-label\">Mot de passe</label>
+                    <div class=\"col-sm-10\">
+                    <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Mot de passe\">
+                    </div>
+                </div>
+                <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
+        </main>
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -199,9 +213,7 @@ class __TwigTemplate_55bbf48b5279ce27b235af0c285a34a5d63b2ab7062fa1827da8c5a5661
         </div>
     #}
 
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Je me connecte !
-    </button>
+    <button type=\"button\" class=\"btn btn-primary\">Je me connecte</button>
 </form>
 {% endblock %}
 ", "security/login.html.twig", "C:\\xampp\\htdocs\\horiza\\templates\\security\\login.html.twig");

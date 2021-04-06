@@ -65,7 +65,7 @@ class __TwigTemplate_8e7c625b219e90931a02c5bd982489623603515fe210dde6e9d47a60434
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "contact";
+        echo "contactez-nous !";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -87,7 +87,7 @@ class __TwigTemplate_8e7c625b219e90931a02c5bd982489623603515fe210dde6e9d47a60434
         // line 6
         echo "
     <header class=\"container-fluid p-5 text-center bg-light\">
-        <h1>Horiza - contact</h1>
+        <h1>Contact</h1>
     </header>
 
     <main class=\"container-fluid py-5\">
@@ -259,12 +259,12 @@ class __TwigTemplate_8e7c625b219e90931a02c5bd982489623603515fe210dde6e9d47a60434
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}contact{% endblock %}
+{% block title %}contactez-nous !{% endblock %}
 
 {% block body %}
 
     <header class=\"container-fluid p-5 text-center bg-light\">
-        <h1>Horiza - contact</h1>
+        <h1>Contact</h1>
     </header>
 
     <main class=\"container-fluid py-5\">

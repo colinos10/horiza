@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'c2e1974ea3f14908d37a52da01dec7964d721a8c',
+    'reference' => '1891b5e7f94e5b6d68a81baeb0fd3c7c18a5d556',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'c2e1974ea3f14908d37a52da01dec7964d721a8c',
+      'reference' => '1891b5e7f94e5b6d68a81baeb0fd3c7c18a5d556',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -172,12 +172,12 @@ private static $installed = array (
     ),
     'doctrine/orm' => 
     array (
-      'pretty_version' => '2.8.3',
-      'version' => '2.8.3.0',
+      'pretty_version' => '2.8.4',
+      'version' => '2.8.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '657a30f8ceef2a78c2ff36a9fe6c6a6717c1c448',
+      'reference' => 'a588555ecd837b8d7e89355d9a13902e54d529c7',
     ),
     'doctrine/persistence' => 
     array (
@@ -399,8 +399,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0.0',
-        1 => '1.0',
+        0 => '1.0',
+        1 => '1.0.0',
       ),
     ),
     'psr/simple-cache-implementation' => 

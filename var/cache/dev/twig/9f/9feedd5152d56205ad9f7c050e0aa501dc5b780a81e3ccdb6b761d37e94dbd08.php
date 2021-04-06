@@ -61,14 +61,8 @@ class __TwigTemplate_7ae953dcf2a54090927335907497536b42cf41d4543db022db0361aca2e
         echo "</title>
 
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">
-        <link rel=\"stylesheet\" href=\"";
-        // line 15
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
-        echo "\">
-        <link rel=\"icon\" type=\"img/png\" href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
-        echo "\" />
+        <link rel=\"stylesheet\" href=\"css/style.css\">
+        <link rel=\"icon\" type=\"img/png\" href=\"img/logo.png\" />
 
         ";
         // line 18
@@ -183,14 +177,9 @@ class __TwigTemplate_7ae953dcf2a54090927335907497536b42cf41d4543db022db0361aca2e
         return "base.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  164 => 33,  146 => 22,  128 => 18,  110 => 12,  98 => 34,  96 => 33,  84 => 23,  82 => 22,  77 => 19,  75 => 18,  70 => 16,  66 => 15,  60 => 12,  47 => 1,);
+        return array (  158 => 33,  140 => 22,  122 => 18,  104 => 12,  92 => 34,  90 => 33,  78 => 23,  76 => 22,  71 => 19,  69 => 18,  60 => 12,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -209,8 +198,8 @@ class __TwigTemplate_7ae953dcf2a54090927335907497536b42cf41d4543db022db0361aca2e
         <title>Horiza - {% block title %}{% endblock %}</title>
 
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">
-        <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
-        <link rel=\"icon\" type=\"img/png\" href=\"{{ asset('img/logo.png') }}\" />
+        <link rel=\"stylesheet\" href=\"css/style.css\">
+        <link rel=\"icon\" type=\"img/png\" href=\"img/logo.png\" />
 
         {% block stylesheets %}{% endblock %}
 
