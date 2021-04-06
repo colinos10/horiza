@@ -11,7 +11,20 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class VehiculeController extends AbstractController
-{
+{   
+      /**
+     * @Route("/vehicule-{id}", name="vehicule")
+     */
+    public function vehicule(VehiculeRepository $vehiculeRepository, $id)
+    {
+        $vehicule = $vehiculeRepository->find($id);
+        $commentaires = $vehicule->getCommentaires();
+        return $this->render('home/vehicule.html.twig', [
+            'vehicule' => $vehicule,
+            'commentaires' => $commentaires
+        ]);
+    }
+
     /**
      * @Route("/admin/vehicules", name="admin_vehicules")
      */

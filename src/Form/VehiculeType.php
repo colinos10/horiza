@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class VehiculeType extends AbstractType
 {
@@ -99,9 +100,29 @@ class VehiculeType extends AbstractType
                     ])
                 ]
             ])
-            ->add('prix')
-            ->add('disponibilite')
-            ->add('type_vehicule')
+            ->add('prix', IntegerType::class, [
+                'required' => true,
+                'label' => 'Prix journalier indicatif (€)',
+                'attr' => [
+                    'placeholder' => '',
+                    'min' => 0,
+                    'max' => 250
+                ]
+            ])
+            ->add('disponibilite', CheckboxType::class,[
+                'required' => true,
+                'label' => 'Disponibilité',
+                'attr' => [
+                    'placeholder' => '',
+                ]
+            ])
+            ->add('type_vehicule', TextType::class, [
+                'required' => true,
+                'label' => 'Type de véhicule',
+                'attr' => [
+                    'placeholder' => 'Ex: Camping-car'
+                ] 
+            ])
             ->add('user', EntityType::class, [
                 'class' => User::class,
                 'choice_label' => 'email',
