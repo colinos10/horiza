@@ -30,16 +30,16 @@ class ContactType extends AbstractType
             ->add('objet', ChoiceType::class, [
                 'required' => true,
                 'choices' => [
-                    '- choix -' => '',
-                    'déposer une annonce' => 'nouveau',
-                    'visiter un logement' => 'visite',
-                    'postuler' => 'emploi',
-                    'signaler un problème' => 'problème'
+                    'Choisissez l\'objet de votre message' => '',
+                    'Déposer une annonce' => 'nouveau',
+                    'Louer un véhicule' => 'location',
+                    'Postuler' => 'emploi',
+                    'Signaler un problème' => 'problème'
                 ]
             ])
             ->add('message', TextareaType::class, [
                 'attr' => [
-                    'minLength' => 50,
+                    // 'minLength' => 50,
                     'maxLength' => 1000
                 ],
                 'help' => '1000 caractères maximum'
