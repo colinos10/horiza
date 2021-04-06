@@ -13,6 +13,17 @@
 .logo {
   width: 20%;
 }
+
+.tittle {
+  display: flex;
+}
+.tittle1 {
+  color: #f39233;
+}
+
+.tittle2 {
+  color: #f1e189;
+}
 /* zone de la balise a  */
 .liens-a {
   display: contents;
@@ -38,8 +49,4 @@
 .text-white {
   display: flex;
   flex-direction: row-reverse;
-}
-
-* {
-  color: red;
 }
