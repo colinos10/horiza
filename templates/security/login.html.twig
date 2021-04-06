@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Connectez-vous et louer un Camping-car ! | Horiza {% endblock %}
+{% block title %}Connectez-vous et louer un Camping-car !{% endblock %}
 
 {% block body %}
 <form method="post">
@@ -13,16 +13,24 @@
             Vous êtes connectés en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Se déconnecter</a>
         </div>
     {% endif %}
-
-    <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
-    <label for="inputPassword">Mot de passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+    <header class="container-fluid text-center bg-info pt-5 pb-5">
+        <h1 class="text-center">Horiza</h1>
+    </header>
+        <main class="container-fluid pl-5 mt-5">
+            <h3 class="text-center mt-3">Connexion</h3>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" for="email" placeholder="email@example.com">Email</label>
+                    <div class="col-sm-10">
+                    <input type="email" value="{{ last_username }}" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-2 col-form-label">Mot de passe</label>
+                    <div class="col-sm-10">
+                    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+                    </div>
+                </div>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        </main>
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -35,8 +43,6 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Je me connecte !
-    </button>
+    <button type="button" class="btn btn-primary">Je me connecte</button>
 </form>
 {% endblock %}
