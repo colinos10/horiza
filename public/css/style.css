@@ -103,3 +103,20 @@ header {
   border-radius: 4px;
   opacity: 0.80;
 }
+
+  .formulaire h1{
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.8;
+  padding: 25px 10px;
+  display: block;
+  text-align: center;
+}
+
+.ml-3{
+  margin-left: 0em !important;
+}
+
+.type-vehicule{
+  margin-bottom: 20px
+}
