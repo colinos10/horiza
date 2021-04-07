@@ -4,19 +4,28 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  text-decoration: none;
 }
 
 /* ******************* HEADER ************************ */
 
-/* zone logo  pur*/
-.logo {
-  width: 20%;
+header {
+  background-color: #b8de6f !important;
 }
 
-/* Titre Horiza */
+
+
+/* zone logo  pur*/
+.logo {
+  width: 15%;
+}
+
+
+
+/* Titre Horiza */ /*titre a fussionner avec le logo pour un meilleurs visuelle  */
 .tittle {
   display: flex;
+  font-size: 3em;
+  justify-content: center;
 }
 .tittle1 {
   color: #f39233;
@@ -26,10 +35,18 @@
   color: #f1e189;
 }
 
+
+
+
+
+
+
 /* zone de la balise a  */
 .liens-a {
   display: contents;
 }
+
+
 
 /* la classe nav */
 .navbar {
@@ -37,18 +54,52 @@
   display: flex;
 }
 
+
+
 /* la classe bouton */
 .navbar-toggler {
   position: relative;
 }
 
+
+
 /* div menu burger */
 .bg-info {
-  background-color: #01c5c4 !important;
+  background-color: #b8de6f !important;
 }
+
+
 
 /* / texte du menu burger */
 .text-white {
   display: flex;
   flex-direction: row-reverse;
+}
+
+
+
+
+/* ************************************* MAIN ****************************** */
+
+.image{
+  background-image: url(https://media.discordapp.net/attachments/430039498470981644/829329520057778196/image_de_fond.png_reverse.png);
+  width: 100%;
+  height: 40em;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.spider{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 30px;
+  max-width: 415px;
+  
+}
+.formulaire {
+  background: #fff;
+  border-radius: 4px;
+  opacity: 0.80;
 }

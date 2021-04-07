@@ -11,23 +11,23 @@
 
             <nav class="navbar navbar-dark bg-info">
                 <a href="http://localhost/horiza/public/" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
-                <div class="tittle">
-                <p class="tittle1">Hor</p>
-                <p class="tittle2">iza</p>
-                </div>
-             
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
             </nav>
+            <div class="tittle">
+                <p class="tittle1">Hor</p>
+                <p class="tittle2">iza</p>
+            </div>
 
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-info p-4 nav-secret" >
                   <a href="#" class="text-white">Rechercher</a>
                   <a href="#" class="text-white">Louer un véhicule</a>
                   <a href="#" class="text-white">Déposer une annonce</a>
-                  <a href="register" class="text-white">S'inscrire</a>
-                  <a href="login" class="text-white">Se connecter</a>
+                  <a href="#" class="text-white">S'inscrire</a>
+                  <a href="#" class="text-white">Se connecter</a>
                   
                 </div>
             </div>
@@ -36,47 +36,52 @@
     </header>
 
     <main class"container-fluid bg-info">
-        <form class="col ml-3 mb-2" role="search">
-            <div>
-                <label for="main-q" class="visually-hidden">Type de véhicule</label>
-                <select name="" id="">
-                    <option value="">Choisissez un type de véhicule dans la liste</option>
-                    <option value="">Camping-car</option>
-                    <option value="">Van</option>
-                </select>
+        <div class="image">
+            <div class="spider">
+                <div class="formulaire">
+                    <form class="col ml-3 mb-2" role="search">
+                        <div>
+                            <label for="main-q" class="visually-hidden">Type de véhicule</label>
+                            <select name="" id="">
+                                <option value="">Choisissez un type de véhicule dans la liste</option>
+                                <option value="">Camping-car</option>
+                                <option value="">Van</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="main-q" class="visually-hidden">Où voulez-vous louer ?</label>
+                            <select name="" id="">
+                                <option value="">Choisissez une ville dans la liste</option>
+                                <option value="">Lille</option>
+                                <option value="">Saint-Quentin</option>
+                                <option value="">Paris</option>
+                                <option value="">Rouen</option>
+                                <option value="">Caen</option>
+                                <option value="">Strasbourg</option>
+                                <option value="">Troyes</option>
+                                <option value="">Rennes</option>
+                                <option value="">Brest</option>
+                                <option value="">Dijon</option>
+                                <option value="">Orléans</option>
+                                <option value="">Tours</option>
+                                <option value="">Nantes</option>
+                                <option value="">Clermont-Ferrand</option>
+                                <option value="">Lyon</option>
+                                <option value="">Poitiers</option>
+                                <option value="">Brive-la-Gaillarde</option>
+                                <option value="">Bordeaux</option>
+                                <option value="">Montpellier</option>
+                                <option value="">Toulouse</option>
+                                <option value="">Avignon</option>
+                                <option value="">Marseille</option>
+                                <option value="">Ajaccio</option>
+                            </select>
+                        </div>
+                            <button class="text-right text-dark">Rechercher</button>
+                    </form>
+                </div>
             </div>
-            <div>
-                <label for="main-q" class="visually-hidden">Où voulez-vous louer ?</label>
-                <select name="" id="">
-                    <option value="">Choisissez une ville dans la liste</option>
-                    <option value="">Lille</option>
-                    <option value="">Saint-Quentin</option>
-                    <option value="">Paris</option>
-                    <option value="">Rouen</option>
-                    <option value="">Caen</option>
-                    <option value="">Strasbourg</option>
-                    <option value="">Troyes</option>
-                    <option value="">Rennes</option>
-                    <option value="">Brest</option>
-                    <option value="">Dijon</option>
-                    <option value="">Orléans</option>
-                    <option value="">Tours</option>
-                    <option value="">Nantes</option>
-                    <option value="">Clermont-Ferrand</option>
-                    <option value="">Lyon</option>
-                    <option value="">Poitiers</option>
-                    <option value="">Brive-la-Gaillarde</option>
-                    <option value="">Bordeaux</option>
-                    <option value="">Montpellier</option>
-                    <option value="">Toulouse</option>
-                    <option value="">Avignon</option>
-                    <option value="">Marseille</option>
-                    <option value="">Ajaccio</option>
-                </select>
-            </div>
-                <button class="text-right text-dark">Rechercher</button>
-                <a href="img/document/pdc-horiza.pdf">Politique de confidentialité</a>
-        </form>    
+        </div>   
     </main>
 
     <footer class="container-fluid bg-info">
