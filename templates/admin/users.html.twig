@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+
+<h1 class="pb-5">Liste des utilisateurs</h1>
+
+<table class="table table-bordered table-dark text-center table-hover table-sm">
+    <thead>
+        <tr>
+            <th>N°</th>
+            <th>Email</th>
+            <th>Rôle(s)</th>
+            <th>Mot de passe</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Téléphone</th>
+            {# <th>Photo principale</th> #}
+            <th>Civilité</th>
+            <th>Adresse</th>
+            <th>Code postal</th>
+            <th>Ville</th>
+            {# <th>Date de naissance</th> #}
+            <th>Modifier</th>
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td class="align-middle">{{ loop.index }}</td>
+                <td class="align-middle">{{ user.email }}</td>
+                <td class="align-middle">{{ user.roles|join(' + ')|lower }}</td>
+                <td class="align-middle">{{ user.password }}</td>
+                <td class="align-middle">{{ user.nom }}</td>
+                <td class="align-middle">{{ user.prenom }}</td>
+                <td class="align-middle">{{ user.tel }}</td>
+                {# <td class="align-middle">{{ user.img1 }}</td> #}
+                <td class="align-middle">{{ user.civilite }}</td>
+                <td class="align-middle">{{ user.adresse }}</td>
+                <td class="align-middle">{{ user.codePostal }}</td>
+                <td class="align-middle">{{ user.ville }}</td>
+                {# <td class="align-middle">{{ user.dateNaissance }}</td> #}
+
+                <td class="align-middle">
+                    <a href="{{ path('admin_users_update', {'id':user.id}) }}"><i class="fas fa-pen-square"></i></a>
+                </td>
+                <td>
+                    <a href="{{ path('admin_users_delete', {'id':user.id}) }}"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
