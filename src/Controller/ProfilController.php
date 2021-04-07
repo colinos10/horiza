@@ -35,9 +35,9 @@ class ProfilController extends AbstractController
             $manager->persist($user);
             $manager->flush();
             $this->addFlash('success', 'Votre profil a bien été modifié');
-            return $this->redirectToRoute('profil');
+            return $this->redirectToRoute('home');
         }
-        return $this->render('profileForm.html.twig', [
+        return $this->render('home/profileForm.html.twig', [
             'profileForm' => $form->createView()
         ]);
     }
@@ -52,6 +52,6 @@ class ProfilController extends AbstractController
         $manager->remove($user);
         $manager->flush();
         $this->addFlash('success', 'Votre compte a bien été supprimé');
-        return $this->redirectToRoute('home_profil');
+        return $this->redirectToRoute('home');
     }
 }
