@@ -9,7 +9,7 @@
 /* ******************* HEADER ************************ */
 
 header {
-  background-color: #b8de6f !important;
+  background-color: #F1E189 !important;
 }
 
 
@@ -32,7 +32,7 @@ header {
 }
 
 .tittle2 {
-  color: #f1e189;
+  color: #B8DE6F;
 }
 
 
@@ -65,7 +65,7 @@ header {
 
 /* div menu burger */
 .bg-info {
-  background-color: #b8de6f !important;
+  background-color: #F1E189 !important;
 }
 
 
@@ -81,6 +81,7 @@ header {
 
 /* ************************************* MAIN ****************************** */
 
+/* l'image en fond sur le main  */
 .image{
   background-image: url(https://media.discordapp.net/attachments/430039498470981644/829329520057778196/image_de_fond.png_reverse.png);
   width: 100%;
@@ -89,6 +90,7 @@ header {
   background-size: cover
 }
 
+/* la div principal du avec le texte + le formulaire  */
 .spider{
   margin-right: auto;
   margin-left: auto;
@@ -98,12 +100,14 @@ header {
   max-width: 415px;
   
 }
+
+/* comme le spider mais quand meme different  */
 .formulaire {
   background: #fff;
   border-radius: 4px;
   opacity: 0.80;
 }
-
+/* contient le texte informatif  */
   .formulaire h1{
   margin: 0;
   font-size: 25px;
@@ -113,10 +117,12 @@ header {
   text-align: center;
 }
 
+/* le nom bootstrap pourri du formulaire */
 .ml-3{
   margin-left: 0em !important;
 }
 
+/* la div pour le type de vehicule */
 .type-vehicule{
   margin-bottom: 20px
 }
