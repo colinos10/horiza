@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -60,7 +61,10 @@ class UserType extends AbstractType
             ->add('adresse')
             ->add('code_postal')
             ->add('ville')
-            ->add('date_naissance')
+            ->add('date_naissance', DateType::class, [
+                'widget' => 'choice',
+                'years' => range(1970, 2021)
+            ])
             ->add('valider', SubmitType::class)
         ;
     }
