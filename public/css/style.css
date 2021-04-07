@@ -14,6 +14,7 @@
   width: 20%;
 }
 
+/* Titre Horiza */
 .tittle {
   display: flex;
 }
@@ -24,6 +25,7 @@
 .tittle2 {
   color: #f1e189;
 }
+
 /* zone de la balise a  */
 .liens-a {
   display: contents;
