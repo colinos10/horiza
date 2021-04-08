@@ -21,12 +21,12 @@
                         <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
                     </ul>
                 </div>
-                {% if vehicule.img2 is not null %}
+                {# {% if vehicule.img2 is not null %}
                     <div class="col-8 offset-2">
                         <h2 class="py-3">Autres photos</h2>
                         <img src="{{ asset('img/vehicule/' ~ vehicule.img2) }}" alt="photo principale {{ vehicule.marque }}" class="w-50">
                     </div>
-                {% endif %}
+                {% endif %} #}
                 {# {% if commentaires is not empty %}
                     <div class="col-8 offset-2 pt-5">
                         <h2 class="py-3">Commentaires</h2>

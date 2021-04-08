@@ -12,7 +12,7 @@
             <th>N°</th>
             <th>Email</th>
             <th>Rôle(s)</th>
-            <th>Mot de passe</th>
+            {# <th>Mot de passe</th> #}
             <th>Nom</th>
             <th>Prénom</th>
             <th>Téléphone</th>
@@ -32,7 +32,7 @@
                 <td class="align-middle">{{ loop.index }}</td>
                 <td class="align-middle">{{ user.email }}</td>
                 <td class="align-middle">{{ user.roles|join(' + ')|lower }}</td>
-                <td class="align-middle">{{ user.password }}</td>
+                {# <td class="align-middle">{{ user.password }}</td> #}
                 <td class="align-middle">{{ user.nom }}</td>
                 <td class="align-middle">{{ user.prenom }}</td>
                 <td class="align-middle">{{ user.tel }}</td>

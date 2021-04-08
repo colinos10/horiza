@@ -15,8 +15,12 @@
                 <h2 class="py-3">{{ vehicule.marque }}</h2>
                 <p>{{ vehicule.modele }}</p>
                 <ul>
-                    <li>Nombre de places : {{ vehicule.nombrePlace }}<sup>2</sup></li>
+                    <li>Nombre de places : {{ vehicule.nombrePlace }}</li>
+                    <li>Immatriculation : {{ vehicule.immatriculation }}</li>
                     <li>Couleur : {{ vehicule.couleur }} </li>
+                    <li>carburant : {{ vehicule.carburant }}</li>
+                    <li>Disponibilité : {{ vehicule.disponibilite }}</li>
+                    <li>Type de véhicule : {{ vehicule.typeVehicule }}</li>
                     <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
                 </ul>
             </div>
