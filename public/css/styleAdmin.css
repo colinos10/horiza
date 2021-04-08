@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+=======
+/* ******************** RESET ******************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* ******************** GLOBAL ******************** */
+
+:root {
+    --color-white: #FFFFFF;
+    --color-light-grey: #BBBBBB;
+}
+
+* {
+    font-weight: lighter;
+}
+
+/* ******************** NAV ******************** */
+
+nav {
+    height: calc(100vh - 78px - 46px);
+}
+
+    nav a {
+        color: var(--color-white);
+    }
+
+        nav a:hover {
+            color: var(--color-light-grey);
+        }
+
+        nav a li {
+            margin: 1em 0;
+            width: 100%;
+            text-align: center;
+        }
+
+/* ******************** FOOTER ******************** */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 0.5em;
+    font-size: 0.75em;
+    
+}
+
+/* ******************** TABLE ******************** */
+
+table img {
+    width: 100px;
+}
+
+/* pour sélectionner des parties du formualaire :
+    form[name="maison"] input,
+    form[name="maison"] #maison_img1,
+    form[name="maison"] textarea {
+        color: red;
+        background: yellow;
+        border: 3px solid green;
+    } */
+>>>>>>> d9991e9da5201455a5a4aebe1a5bfed0b3d7724c

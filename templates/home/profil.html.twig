@@ -8,38 +8,48 @@
     </header>
     <main class="container-fluid pl-5 mt-5">
         <h3> Informations personnelles</h3>
-            <form>
-                <div class="form-group row pt-4">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                    <input type="text" class="form-control" id="email" placeholder="email@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="password" class="col-sm-2 col-form-label">Mot de passe</label>
-                    <div class="col-sm-10">
-                    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="nom" class="col-sm-2 col-form-label">Nom</label>
-                    <div class="col-sm-10">
-                    <input type="text" class="form-control" id="email" placeholder="Charles">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="prenom" class="col-sm-2 col-form-label">Prénom</label>
-                    <div class="col-sm-10">
-                    <input type="text" class="form-control" id="email" placeholder="Dubois">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Téléphone</label>
-                    <div class="col-sm-10">
-                    <input type="tel" class="form-control" id="phone" placeholder="01.54.76.34.56" pattern="[0-9]{10}" required>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-success">Mettre à jour mon profil</button>
-            </form>
+
+        <table class="table table-bordered table-dark text-center table-hover table-sm">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    {# <th>Mot de passe</th> #}
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Téléphone</th>
+                    {# <th>Photo principale</th> #}
+                    <th>Civilité</th>
+                    <th>Adresse</th>
+                    <th>Code postal</th>
+                    <th>Ville</th>
+                    {# <th>Date de naissance</th> #}
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-middle">{{ user.email }}</td>
+                    {# <td class="align-middle">{{ user.password }}</td> #}
+                    <td class="align-middle">{{ user.nom }}</td>
+                    <td class="align-middle">{{ user.prenom }}</td>
+                    <td class="align-middle">{{ user.tel }}</td>
+                    {# <td class="align-middle">{{ user.img1 }}</td> #}
+                    <td class="align-middle">{{ user.civilite }}</td>
+                    <td class="align-middle">{{ user.adresse }}</td>
+                    <td class="align-middle">{{ user.codePostal }}</td>
+                    <td class="align-middle">{{ user.ville }}</td>
+                    {# <td class="align-middle">{{ user.dateNaissance }}</td> #}
+    
+                    <td class="align-middle">
+                        <a href="{{ path('profil_update', {'id':user.id}) }}"><i class="fas fa-pen-square"></i></a>
+                    </td>
+                    <td>
+                        <a href="{{ path('profil_delete', {'id':user.id}) }}"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+           
     </main>
 {% endblock %}

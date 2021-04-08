@@ -27,7 +27,7 @@ class ContactController extends AbstractController
             }
             $mail = (new \Swift_Message('Horiza - demande de contact - ' . $contact['objet'])) // prépare le mail (avec son titre)
                 ->setFrom([$contact['email'] => $contact['email']]) // définit l'expéditeur
-                ->setTo('colin.nacfer10@gmail.com') // définit le destinaire
+                ->setTo('amandine.bensekhri@gmail.com') // définit le destinaire
                 ->setBody( // définit le corps du message
                     $this->renderView('contact/emailContact.html.twig', [ // passe les informations du formulaire au template de mail
                         'nom' => $contact['nom'],
@@ -43,7 +43,7 @@ class ContactController extends AbstractController
                 $mail->attach($pieceJointe); // attache la pièce-jointe au corps du mail
             }
             $mailer->send($mail); // envoit le mail
-            $this->addFlash('success', 'Votre message a bien été envoyé'); // message de succès
+            $this->addFlash('success', 'Votre message a bien été envoyé !'); // message de succès
             return $this->redirectToRoute('contact'); // redirection
         }
         return $this->render('contact/contact.html.twig', [
