@@ -9,7 +9,7 @@
 /* ******************* HEADER ************************ */
 
 header {
-  background-color: #F1E189 !important;
+  background-color: white !important;
 }
 
 
@@ -21,7 +21,7 @@ header {
 
 
 
-/* Titre Horiza */ /*titre a fussionner avec le logo pour un meilleurs visuelle  */
+/* Titre Horiza */ /*titre a fusionner avec le logo pour un meilleur visuel  */
 .tittle {
   display: flex;
   font-size: 3em;
@@ -34,11 +34,6 @@ header {
 .tittle2 {
   color: #B8DE6F;
 }
-
-
-
-
-
 
 
 /* zone de la balise a  */
@@ -65,21 +60,19 @@ header {
 
 /* div menu burger */
 .bg-info {
-  background-color: #F1E189 !important;
+  background-color: white !important;
 }
 
+.collapse {
+  color: black;
+}
 
 
 /* / texte du menu burger */
 .text-white {
   display: flex;
   flex-direction: row-reverse;
-<<<<<<< HEAD
-=======
 }
-
-
-
 
 /* ************************************* MAIN ****************************** */
 
@@ -105,7 +98,7 @@ header {
 
 /* comme le spider mais quand meme different  */
 .formulaire {
-  background: #fff;
+  background: #ffffff;
   border-radius: 4px;
   opacity: 0.80;
 }
@@ -127,5 +120,11 @@ header {
 /* la div pour le type de vehicule */
 .type-vehicule{
   margin-bottom: 20px
->>>>>>> d9991e9da5201455a5a4aebe1a5bfed0b3d7724c
+}
+
+/* ************************************* FOOTER ****************************** */
+
+/* Accueil Footer */
+.text-dark {
+  color: white !important;
 }
