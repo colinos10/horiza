@@ -39,11 +39,11 @@
                     </ul>
                 </nav>
                 <div class="col-11 p-5">
-                    {% for label, messages in app.flashes %}
+                    {# {% for label, messages in app.flashes %}
                         {% for message in messages %}
                             <div class="flash-{{ label }} bg-{{ label }} text-light p-3 mb-5 rounded">{{ message }}</div>
                         {% endfor %}
-                    {% endfor %}
+                    {% endfor %} #}
                     {% block body %}{% endblock %}
                 </div>
             </div>
