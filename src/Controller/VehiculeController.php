@@ -163,7 +163,7 @@ class VehiculeController extends AbstractController
     }
 
     /**
-     * @Route("/vehicules/create", name="admin_vehicules_create")
+     * @Route("/annonce/create", name="annonce_create")
      */
     public function creerVehicule(Request $request)
     {
@@ -190,12 +190,12 @@ class VehiculeController extends AbstractController
                 $manager->persist($vehicule); // dit à Doctrine qu'on va vouloir sauvegarder en bdd
                 $manager->flush(); // exécute la requête
                 $this->addFlash('success', 'Le véhicule a bien été ajouté');
-                return $this->redirectToRoute('admin_vehicules');
+                return $this->redirectToRoute('annonce_create');
             } else {
                 $this->addFlash('danger', 'Une erreur est survenue lors de l\'ajout du véhicule');
             }
         }
-        return $this->render('admin/vehiculeForm.html.twig', [
+        return $this->render('home/annonceForm.html.twig', [
             'vehiculeForm' => $form->createView() // création de la vue du formulaire et envoi à la vue (fichier)
         ]);
     }
