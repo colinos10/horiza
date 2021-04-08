@@ -9,10 +9,10 @@
 /* ******************* HEADER ************************ */
 
 header {
-  background-color: snow !important;
+  background-color: white !important;
 }
 
-
+/* ******************* LOGO ************************ */
 
 /* zone logo  pur*/
 .logo {
@@ -49,30 +49,30 @@ header {
   display: flex;
 }
 
+.a-menu {
+  text-align: right;
+  display: block;
+}
 
 
 /* la classe bouton */
 .navbar-toggler {
   position: relative;
+  background-color: #F39233;
 }
 
-
+.navbar-dark .navbar-toggler {
+}
 
 /* div menu burger */
 .bg-info {
-  background-color: snow !important;
+  background-color: white !important;
 }
-
 
 /* / texte du menu burger */
 .text-white {
   display: flex;
-  flex-direction: row-reverse;
-  background-color: black;
-}
-
-.navbar-toggler-icon{
-  background-color: black;
+  flex-direction: column-reverse;
 }
 
 
@@ -96,6 +96,7 @@ header {
   padding-right: 10px;
   padding-top: 30px;
   max-width: 415px;
+  font-size: 12px;
   
 }
 
@@ -149,3 +150,14 @@ header {
   border-radius: 4px;
 }
 
+/* ************************************* FOOTER ****************************** */
+
+.footer-bottom {
+  display: flex;
+  font-size: 12px;
+}
+
+.contact {
+  margin-left: auto;
+  margin-right: 5px;
+}
