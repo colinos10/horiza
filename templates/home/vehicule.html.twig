@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}véhicule{% endblock %}
+
+{% block body %}
+
+    <header class="container-fluid p-5 text-center bg-light">
+        <h1>HORIZA - {{ vehicule.marque }}</h1>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row p-5">
+            <div class="col-8 offset-2">
+                <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale {{ vehicule.marque }}" class="w-100">
+                <h2 class="py-3">{{ vehicule.marque }}</h2>
+                <p>{{ vehicule.modele }}</p>
+                <ul>
+                    <li>Nombre de places : {{ vehicule.nombrePlace }}<sup>2</sup></li>
+                    <li>Couleur : {{ vehicule.couleur }} </li>
+                    <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
+                </ul>
+            </div>
+            {% if vehicule.img2 is not null %}
+                <div class="col-8 offset-2">
+                    <h2 class="py-3">Autres photos</h2>
+                    <img src="{{ asset('img/vehicule/' ~ vehicule.img2) }}" alt="photo principale {{ vehicule.marque }}" class="w-50">
+                </div>
+            {% endif %}
+            {# {% if commentaires is not empty %}
+                <div class="col-8 offset-2 pt-5">
+                    <h2 class="py-3">Commentaires</h2>
+                    <ul>
+                        {% for commentaire in commentaires %}
+                            <li>- {{ commentaire.commentaire }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %} #}
+        </div>
+    </main>
+
+{% endblock %}

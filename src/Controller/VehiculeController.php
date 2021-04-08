@@ -32,7 +32,7 @@ class VehiculeController extends AbstractController
    {
        $vehicules = $vehiculeRepository->findAll();
        return $this->render('home/vehicules.html.twig', [
-           'vehicules' => $vehicules
+           'vehicules' => $vehicules,
        ]);
    }
 
