@@ -6,7 +6,12 @@
 
     <header>
         
-        
+        {% if app.user %}
+                <div class="mb-3">
+                    Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">déconnexion</a>
+                </div>
+        {% endif %}
+
         <div class="pos-f-t">
 
             <nav class="navbar navbar-dark bg-info">
@@ -19,12 +24,15 @@
             
 
             <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-info nav-secret col" >
-                  {# <a href="vehicules" class="text-dark">Rechercher</a> #}
-                  <a href="vehicules" class="text-dark">Louer un véhicule</a>
-                  <a href="#" class="text-dark">Déposer une annonce</a>
-                  <a href="register" class="text-dark">S'inscrire</a>
-                  <a href="login" class="text-dark">Se connecter</a>
+                <div class="bg-info nav-secret" >
+                    {# <a href="vehicules" class="text-dark">Rechercher</a> #}
+                    <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
+                    <a href="annonce/create" class="text-dark a-menu mr-3">Déposer une annonce</a>
+                    <a href="register" class="text-dark a-menu mr-3">S'inscrire</a>
+                    <a href="login" class="text-dark a-menu mr-3">Se connecter</a>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id != null %}
+                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="text-dark a-menu mr-3">Mon profil/Mon compte</a>
+                {% endif %}
                 </div>
                 
             </div>
@@ -104,7 +112,7 @@
                 <i class="far fa-heart"></i>
             </div> #}
             <div type="button">
-                <a href="">
+                <a href="annonce/create">
                     <p class="text-dark text-decoration-none">Publier</p>
                     <i class="far fa-comment text-dark"></i>
                 </a>
@@ -121,11 +129,17 @@
             </div> #}
         </div>
     </footer>
-    <footer class="bg-dark">
-        <a href="mentions"><p class="text-white mr-5">Mentions Légales</p></a>
-        <a href="politique"><p class="text-white mr-5">Politique de confidentialité</p></a>
-        <a href="cgu"><p class="text-white mr-5">CGU - CGV</p></a>
-        <a href="about"><p class="text-white mr-5">À propos de nous</p></a>
+    <footer class="bg-dark footer-bottom">
+        <div class="mpca">
+            <a href="mentions"><p class="text-white ml-2">Mentions Légales</p></a>
+            <a href="politique"><p class="text-white ml-2">Politique de confidentialité</p></a>
+            <a href="cgu"><p class="text-white ml-2">CGU - CGV</p></a>
+            <a href="about"><p class="text-white ml-2">À propos de nous</p></a>
+            
+        </div>
+        <div class="contact">
+            <a href="contact"><p class="text-white ml-2">Contactez-nous</p></a>
+        </div>
     </footer>
     
 
