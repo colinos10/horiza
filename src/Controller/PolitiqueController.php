@@ -13,7 +13,7 @@ class PolitiqueController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('politique/index.html.twig', [
+        return $this->render('home/politique.html.twig', [
             'controller_name' => 'PolitiqueController',
         ]);
     }
