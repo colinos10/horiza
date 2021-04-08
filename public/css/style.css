@@ -9,11 +9,7 @@
 /* ******************* HEADER ************************ */
 
 header {
-<<<<<<< HEAD
-  background-color: white !important;
-=======
   background-color: snow !important;
->>>>>>> 06e5d34efbf3df6a45443e26d3abd94bb68cb86c
 }
 
 
@@ -64,15 +60,7 @@ header {
 
 /* div menu burger */
 .bg-info {
-<<<<<<< HEAD
-  background-color: white !important;
-=======
   background-color: snow !important;
->>>>>>> 06e5d34efbf3df6a45443e26d3abd94bb68cb86c
-}
-
-.collapse {
-  color: black;
 }
 
 
@@ -80,10 +68,6 @@ header {
 .text-white {
   display: flex;
   flex-direction: row-reverse;
-<<<<<<< HEAD
-}
-
-=======
   background-color: black;
 }
 
@@ -93,7 +77,6 @@ header {
 
 
 
->>>>>>> 06e5d34efbf3df6a45443e26d3abd94bb68cb86c
 /* ************************************* MAIN ****************************** */
 
 /* l'image en fond sur le main  */
@@ -102,7 +85,7 @@ header {
   width: 100%;
   height: 40em;
   background-repeat: no-repeat;
-  background-size: cover
+  background-size: cover;
 }
 
 /* la div principal du avec le texte + le formulaire  */
@@ -144,14 +127,6 @@ header {
   margin-bottom: 20px
 }
 
-<<<<<<< HEAD
-/* ************************************* FOOTER ****************************** */
-
-/* Accueil Footer */
-.text-dark {
-  color: white !important;
-}
-=======
 /* pour changer le curseur au survol et les autres element commun  des selecteurs   */
 .pointer{
   cursor: pointer;
@@ -174,4 +149,3 @@ header {
   border-radius: 4px;
 }
 
->>>>>>> 06e5d34efbf3df6a45443e26d3abd94bb68cb86c
