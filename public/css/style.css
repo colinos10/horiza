@@ -9,7 +9,11 @@
 /* ******************* HEADER ************************ */
 
 header {
+<<<<<<< HEAD
   background-color: white !important;
+=======
+  background-color: snow !important;
+>>>>>>> 06e5d34efbf3df6a45443e26d3abd94bb68cb86c
 }
 
 
@@ -60,7 +64,11 @@ header {
 
 /* div menu burger */
 .bg-info {
+<<<<<<< HEAD
   background-color: white !important;
+=======
+  background-color: snow !important;
+>>>>>>> 06e5d34efbf3df6a45443e26d3abd94bb68cb86c
 }
 
 .collapse {
@@ -72,8 +80,20 @@ header {
 .text-white {
   display: flex;
   flex-direction: row-reverse;
+<<<<<<< HEAD
 }
 
+=======
+  background-color: black;
+}
+
+.navbar-toggler-icon{
+  background-color: black;
+}
+
+
+
+>>>>>>> 06e5d34efbf3df6a45443e26d3abd94bb68cb86c
 /* ************************************* MAIN ****************************** */
 
 /* l'image en fond sur le main  */
@@ -117,14 +137,41 @@ header {
   margin-left: 0em !important;
 }
 
+
+
 /* la div pour le type de vehicule */
 .type-vehicule{
   margin-bottom: 20px
 }
 
+<<<<<<< HEAD
 /* ************************************* FOOTER ****************************** */
 
 /* Accueil Footer */
 .text-dark {
   color: white !important;
 }
+=======
+/* pour changer le curseur au survol et les autres element commun  des selecteurs   */
+.pointer{
+  cursor: pointer;
+  height: 50px;
+  background-color: snow;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 23em;
+  border-radius: 4px;
+}
+
+/* pour le bouton rechercher  */
+.button-rechercher{
+  width: 19em;
+  height: 3em;
+  padding-right: 7em;
+  margin-bottom: 19px;
+  font-size: 1.2em;
+  background-color: #F39233;
+  border-radius: 4px;
+}
+
+>>>>>>> 06e5d34efbf3df6a45443e26d3abd94bb68cb86c
