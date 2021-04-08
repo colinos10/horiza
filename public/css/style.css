@@ -9,7 +9,7 @@
 /* ******************* HEADER ************************ */
 
 header {
-  background-color: #F1E189 !important;
+  background-color: snow !important;
 }
 
 
@@ -65,7 +65,7 @@ header {
 
 /* div menu burger */
 .bg-info {
-  background-color: #F1E189 !important;
+  background-color: snow !important;
 }
 
 
@@ -74,8 +74,12 @@ header {
 .text-white {
   display: flex;
   flex-direction: row-reverse;
+  background-color: black;
 }
 
+.navbar-toggler-icon{
+  background-color: black;
+}
 
 
 
@@ -122,7 +126,31 @@ header {
   margin-left: 0em !important;
 }
 
+
+
 /* la div pour le type de vehicule */
 .type-vehicule{
   margin-bottom: 20px
+}
+
+/* pour changer le curseur au survol et les autres element commun  des selecteurs   */
+.pointer{
+  cursor: pointer;
+  height: 50px;
+  background-color: snow;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 23em;
+  border-radius: 4px;
+}
+
+/* pour le bouton rechercher  */
+.button-rechercher{
+  width: 19em;
+  height: 3em;
+  padding-right: 7em;
+  margin-bottom: 19px;
+  font-size: 1.2em;
+  background-color: #F39233;
+  border-radius: 4px;
 }
