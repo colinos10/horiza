@@ -18,10 +18,10 @@ class VehiculeController extends AbstractController
     public function vehicule(VehiculeRepository $vehiculeRepository, $id)
     {
         $vehicule = $vehiculeRepository->find($id);
-        $commentaires = $vehicule->getCommentaires();
+        // $commentaires = $vehicule->getCommentaires();
         return $this->render('home/vehicule.html.twig', [
             'vehicule' => $vehicule,
-            'commentaires' => $commentaires
+            // 'commentaires' => $commentaires
         ]);
     }
 
