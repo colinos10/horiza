@@ -7,15 +7,13 @@
   }
 
 
-  .inscription{
-      font-size: 40px;
+.inscription{
+      font-size: 80px;
   }
 
-  .form{
-    border: 1px solid #eee;
-    padding: 30px 20px;
-    border-radius: 3px;
-    margin-bottom: 30px;
-    position: relative;
-}
+.formu{
+    
+    padding: 15px 15px 100px;
+    max-width: 100%;
+  }
   

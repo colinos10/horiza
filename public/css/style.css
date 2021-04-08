@@ -41,7 +41,9 @@ header {
   display: contents;
 }
 
-
+.nav-secret{
+  display: flex;
+}
 
 /* la classe nav */
 .navbar {

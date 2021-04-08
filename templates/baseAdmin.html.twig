@@ -34,7 +34,7 @@
                         {% if is_granted('ROLE_SUPER_ADMIN') %}
                             <a href="{{ path('admin_users') }}" title="utilisateurs"><li><i class="fas fa-users"></i></li></a>
                         {% endif %}
-                        <a href="{{ path('app_logout') }}" title="déconnexion"><li><i class="fas fa-user-times"></i></li></a>
+                        <a href="{{ path('app_login') }}" title="déconnexion"><li><i class="fas fa-user-times"></i></li></a>
                         <a href="{{ path('home') }}" title="accueil du site"><li><i class="fas fa-door-open"></i></li></a>
                     </ul>
                 </nav>
