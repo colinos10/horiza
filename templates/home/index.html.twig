@@ -16,10 +16,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
             </nav>
-            <div class="tittle">
-                <p class="tittle1">Hor</p>
-                <p class="tittle2">iza</p>
-            </div>
+            
 
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-info p-4 nav-secret" >
@@ -28,9 +25,13 @@
                   <a href="#" class="text-white">Déposer une annonce</a>
                   <a href="register" class="text-white">S'inscrire</a>
                   <a href="login" class="text-white">Se connecter</a>
-                  
                 </div>
+                
             </div>
+                <div class="tittle">
+                    <p class="tittle1">Hor</p>
+                    <p class="tittle2">iza</p>
+                </div>
 
           </div>
     </header>
@@ -90,36 +91,40 @@
         </div>   
     </main>
 
-    <footer class="container-fluid bg-info">
+    <footer class="container-fluid bg-info" class="accueil-footer">
         <div class="row text-center d-flex justify-content-around" href="http://localhost/horiza/public/">
-            <div type="button" >
-                <p>Rechercher</p>
-                <i class="fab fa-sistrix"></i>
+            <div type="button" class="text-decoration-none">
+                <a href="vehicules">
+                    <p class="text-dark text-decoration-none">Rechercher</p>
+                    <i class="fab fa-sistrix text-dark"></i>
+                </a>
             </div>
             {# <div type="button">
                 <p>Favoris</p>
                 <i class="far fa-heart"></i>
             </div> #}
             <div type="button">
-                <p>Publier</p>
-                <i class="far fa-comment"></i>
+                <a href="">
+                    <p class="text-dark text-decoration-none">Publier</p>
+                    <i class="far fa-comment text-dark"></i>
+                </a>
             </div>
             {# <div type="button">
                 <p>Voyages</p>
                 <i class="fas fa-shuttle-van"></i>
             </div> #}
-            <div type="button">
+            {# <div type="button">
                 <a href="profil">
-                    <p>Mon compte</p>
-                    <i class="far fa-user"></i>
+                    <p class="text-dark text-decoration-none">Mon compte</p>
+                    <i class="far fa-user text-dark"></i>
                 </a>
-            </div>
+            </div> #}
         </div>
     </footer>
     <footer class="bg-dark">
-        <a href="../public/img/document/mentions.pdf"><p class="text-white mr-5">Mentions Légales</p></a>
-        <a href="../public/img/document/pdc.pdf"><p class="text-white mr-5">Politique de confidentialité</p></a>
-        <a href="../public/img/document/cgu-cgv.pdf"><p class="text-white mr-5">CGU - CGV</p></a>
+        <a href="mentions"><p class="text-white mr-5">Mentions Légales</p></a>
+        <a href="politique"><p class="text-white mr-5">Politique de confidentialité</p></a>
+        <a href="cgu"><p class="text-white mr-5">CGU - CGV</p></a>
         <a href="about"><p class="text-white mr-5">À propos de nous</p></a>
     </footer>
     
