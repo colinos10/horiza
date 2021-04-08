@@ -74,6 +74,8 @@ header {
 .text-white {
   display: flex;
   flex-direction: row-reverse;
+<<<<<<< HEAD
+=======
 }
 
 
@@ -125,4 +127,5 @@ header {
 /* la div pour le type de vehicule */
 .type-vehicule{
   margin-bottom: 20px
+>>>>>>> d9991e9da5201455a5a4aebe1a5bfed0b3d7724c
 }
