@@ -6,11 +6,11 @@
 
     <header>
         
-        {% if app.user %}
+        {# {% if app.user %}
                 <div class="mb-3">
                     Vous êtes connecté en tant que {{ app.user.username }}!
                 </div>
-        {% endif %}
+        {% endif %} #}
 
         <div class="pos-f-t">
 
@@ -52,6 +52,15 @@
 
     <main class"container-fluid bg-info">
         <div class="image">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    {% for label, messages in app.flashes %}
+                        {% for message in messages %}
+                            <div class="flash-{{ label }} bg-{{ label }} text-light p-3 mb-5 rounded">{{ message }}</div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>   
     </main>
 
