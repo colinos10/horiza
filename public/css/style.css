@@ -30,11 +30,12 @@ div {
 
 /* ******************* HEADER ************************ */
 
+/* 
 header {
   background-color: white !important;
   width: 100%;
-  /* position: fixed; */
-}
+  position: fixed;
+} */
 
 /* ******************* LOGO ************************ */
 
@@ -58,15 +59,22 @@ header {
   display: contents;
 }
 
-/* la classe nav */
+/* la classe nav
 .navbar {
   align-items: end;
   display: flex;
-}
+} */
 
 .a-menu {
   text-align: right;
   display: block;
+}
+
+@media screen and (min-width: 768px){
+  .navbar-bar{
+    display: flex;
+  }
+
 }
 
 
@@ -79,15 +87,15 @@ header {
 
 
 /* div menu burger */
-.bg-info {
+/* .bg-info {
   background-color: white !important;
-}
+} */
 
 /* / texte du menu burger */
-.text-white {
+/* .text-white {
   display: flex;
   flex-direction: column-reverse;
-}
+} */
 
 
 
