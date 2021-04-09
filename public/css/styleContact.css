@@ -1,0 +1,79 @@
+/* ******************** RESET ******************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  
+  
+  
+  .main-contact{
+    background-image: url(https://cdn.discordapp.com/attachments/813714784452870145/827102545263853589/photo-1505753065532-68713e211a3d.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: snow;
+  }
+
+  
+
+.imput-contact {
+    margin-bottom: 1rem;
+    margin-left: 25%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.retour-contact{
+    border-radius: 15px;
+}
+
+
+
+
+
+@media (max-width: 650px){
+.main-contact-principal,.retour-contact {
+    max-width: 40.666667% !important;
+    margin-left: 8em !important;
+}
+}
+
+@media (min-width: 651px) and (max-width: 800px){
+.main-contact-principa,.retour-contactl {
+    max-width: 50.666667% !important;
+    margin-left: 10em !important;
+}
+}
+
+
+@media (min-width: 801px) and (max-width :901px) {
+.main-contact-principal,.retour-contact {
+    max-width: 23.666667% !important;
+    margin-left: 24em !important;
+}
+}   
+
+@media (min-width: 901px) and  (max-width: 1101px) {
+.main-contact-principal,.retour-contact {
+    max-width: 23.666667% !important;
+    margin-left: 21em !important;
+}
+}
+
+@media (min-width: 1110px) and  (max-width: 1301px) {
+.main-contact-principal,.retour-contact  {
+    max-width: 23.666667% !important;
+    margin-left: 30em !important;
+}
+}
+
+@media (min-width: 1301px) and (max-width :1801px) {
+.main-contact-principal ,.retour-contact {
+    max-width: 23.666667% !important;
+    margin-left: 35em !important;
+}
+}
