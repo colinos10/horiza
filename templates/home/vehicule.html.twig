@@ -4,9 +4,15 @@
 
 {% block body %}
 
+<<<<<<< HEAD
     <div class="container-fluid p-5 text-center bg-light">
         <h1>HORIZA - {{ vehicule.marque }}</h1>
     </div>
+=======
+    <header class="container-fluid p-5 text-center bg-light">
+        <h1>{{ vehicule.marque }} - {{ vehicule.modele }}</h1>
+    </header>
+>>>>>>> 7d51b98251625c550e89f5e44ae8facb24bd7f7d
 
     <main class="container-fluid">
         <div class="row p-5">
@@ -31,7 +37,17 @@
                 </div>
             {% endif %}
         </div>
-        <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
+
+        <div>
+            <p>CONTACTER LE PROPRIETAIRE</p>
+            <p>Nom : </p>
+            <p>Numéro de téléphone : </p>
+            <p>Email : </p>
+        </div>
+
+        <div class="text-right">
+            <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
+        </div>
     </main>
 
 {% endblock %}

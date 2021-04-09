@@ -65,7 +65,7 @@ class VehiculeType extends AbstractType
                 ] 
             ])
             ->add('img1', FileType::class, [
-                'required' => false,
+                'required' => true,
                 'label' => 'Photo principale',
                 'mapped' => false,
                 'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
@@ -122,11 +122,6 @@ class VehiculeType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Ex: Camping-car'
                 ] 
-            ])
-            ->add('user', EntityType::class, [
-                'class' => User::class,
-                'choice_label' => 'email',
-                'expanded' => true
             ])
             ->add('valider', SubmitType::class)
         ;

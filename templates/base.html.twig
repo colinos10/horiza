@@ -39,6 +39,9 @@
                     {# <a href="vehicules" class="text-dark">Rechercher</a> #}
                     <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
                     <a href="annonce/create" class="text-dark a-menu mr-3">Déposer une annonce</a>
+                {% if app.user %}
+                    <a href="annonce" class="text-dark a-menu mr-3">Gérer mes annonces</a>
+                {% endif %}
                 {% if app.user == null %}
                     <a href="register" class="text-dark a-menu mr-3">S'inscrire</a>
                     {% endif %}
