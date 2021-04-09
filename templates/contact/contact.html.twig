@@ -8,53 +8,60 @@
         <h1>Contact</h1>
     </header>
 
-    <main class="container-fluid py-5">
+    <main class="container-fluid py-5 main-contact">
+        <div class="">
 
-        <div class="row">
-            <div class="col-6 offset-3">
-                {% for label, messages in app.flashes %}
-                    {% for message in messages %}
-                        <div class="flash-{{ label }} bg-{{ label }} text-light p-3 mb-5 rounded">{{ message }}</div>
-                    {% endfor %}
-                {% endfor %}
-            </div>
-        </div>
-            
-        {{ form_start(contactForm) }}
-        
             <div class="row">
-                
-                <div class="col-3 offset-3 mb-3">
-                    {{ form_label(contactForm.nom) }}
-                    {{ form_widget(contactForm.nom) }}
-                    {# {{ form_errors(contactForm.nom) }} #}
+                <div class="col-6 offset-3">
+                    {% for label, messages in app.flashes %}
+                        {% for message in messages %}
+                            <div class="flash-{{ label }} bg-{{ label }} text-light p-3 mb-5 rounded">{{ message }}</div>
+                        {% endfor %}
+                    {% endfor %}
                 </div>
+            </div>
 
-                <div class="col-3 mb-3">
-                    {{ form_label(contactForm.prenom) }}
-                    {{ form_widget(contactForm.prenom) }}
-                </div>
+             <div class="row main-contact-principal"> 
+            {{ form_start(contactForm) }}
+            
+                <div class="row">
+                    
+                    <div class="imput-contact">
+                        {{ form_label(contactForm.nom) }}
+                        {{ form_widget(contactForm.nom) }}
+                        {# {{ form_errors(contactForm.nom) }} #}
+                    </div>
 
-                <div class="col-6 offset-3 mb-3">
-                    {{ form_label(contactForm.email) }}
-                    {{ form_widget(contactForm.email) }}
-                </div>
+                    <div class="imput-contact">
+                        {{ form_label(contactForm.prenom) }}
+                        {{ form_widget(contactForm.prenom) }}
+                    </div>
 
-                <div class="col-6 offset-3 mb-3">
-                    {{ form_label(contactForm.objet) }}
-                    {{ form_widget(contactForm.objet) }}
-                </div>
+                    <div class="imput-contact">
+                        {{ form_label(contactForm.email) }}
+                        {{ form_widget(contactForm.email) }}
+                    </div>
 
-                <div class="col-6 offset-3 mb-3">
-                    {{ form_label(contactForm.message) }}
-                    {{ form_widget(contactForm.message) }}
-                </div>
+                    <div class="imput-contact">
+                        {{ form_label(contactForm.objet) }}
+                        {{ form_widget(contactForm.objet) }}
+                    </div>
 
-                <div class="col-6 offset-3 mb-3">
-                    {{ form_label(contactForm.fichier) }}
-                    {{ form_widget(contactForm.fichier) }}
-                    {{ form_help(contactForm.fichier) }}
-                </div>
+                    <div class="imput-contact message-contact">
+                        {{ form_label(contactForm.message) }}
+                        {{ form_widget(contactForm.message) }}
+                    </div>
+
+                    <div class="imput-contact">
+                        {{ form_label(contactForm.fichier) }}
+                        {{ form_widget(contactForm.fichier) }}
+                        {{ form_help(contactForm.fichier) }}
+                    </div>
+
+                    <div class=" imput-contact envoi-contact ">
+                        
+                        {{ form_widget(contactForm.envoyer) }}
+                    </div>
 
                 <div class="col-6 offset-3 text-right mb-3">
                     {{ form_widget(contactForm.envoyer) }}
@@ -62,6 +69,7 @@
 
                 </div>
 
+            {{ form_end(contactForm) }}
             </div>
 
         {{ form_end(contactForm) }}
