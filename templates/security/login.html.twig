@@ -5,12 +5,12 @@
 {% block body %}
 
     <header class="container-fluid p-5 text-center bg-light">
-        <h2>HORIZA</h2>
+        <h2>Connexion</h2>
     </header>
 
     <main class="container-fluid p-5">
 
-        <h1 class="col-12 text-center my-3">Connexion</h1>
+        {# <h1 class="col-12 text-center my-3">Connexion</h1> #}
 
         <form method="post" class="col-4 offset-4">
 
@@ -24,12 +24,12 @@
                 </div>
             {% endif %} #}
 
-            <div class="my-3">
+            <div>
                 <label for="inputEmail">Email</label>
                 <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
             </div>
 
-            <div class="my-3">
+            <div class="my-2">
                 <label for="inputPassword">Password</label>
                 <input type="password" name="password" id="inputPassword" class="form-control" required>
             </div>
@@ -42,12 +42,14 @@
             #}
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" name="_remember_me" class="mr-2">se souvenir de moi
+                    <input type="checkbox" name="_remember_me" class="mr-2">Se souvenir de moi
                 </label>
             </div>
 
             <div class="text-right">
                 <button class="btn btn-secondary my-3" type="submit">Connexion</button>
+                <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
+
             </div>
 
         </form>

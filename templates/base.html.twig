@@ -22,16 +22,16 @@
 
     <header>
         
-        {% if app.user %}
+        {# {% if app.user %}
                 <div class="mb-3">
                     Vous êtes connecté en tant que {{ app.user.username }}!
                 </div>
-        {% endif %}
+        {% endif %} #}
 
         <div class="pos-f-t">
 
             <nav class="navbar navbar-dark bg-white">
-                <a href="http://localhost/horiza/public/" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
+                <a href="{{ path('home') }}" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
