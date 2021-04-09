@@ -23,14 +23,17 @@ h1 {
 p,
 a,
 main,
-h2 {
-  font-family:'Oswald', sans-serif;
+h2,
+div {
+  font-family: CaviarDreams;
 }
 
 /* ******************* HEADER ************************ */
 
 header {
   background-color: white !important;
+  width: 100%;
+  position: fixed;
 }
 
 /* ******************* LOGO ************************ */
@@ -173,4 +176,8 @@ header {
   margin-right: 5px;
 
   display: grid;
+}
+
+.reseaux {
+  text-align: center;
 }
