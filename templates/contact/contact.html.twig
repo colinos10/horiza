@@ -63,14 +63,18 @@
                         {{ form_widget(contactForm.envoyer) }}
                     </div>
 
+                <div class="col-6 offset-3 text-right mb-3">
+                    {{ form_widget(contactForm.envoyer) }}
+                    <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
+
                 </div>
 
             {{ form_end(contactForm) }}
             </div>
-            <div class="imput-contact ">
-                <a href="{{ path('home') }}" type="button" class="btn btn-info retour-contact">Retour à la page d'accueil</a>
-            </div>
-        </div>
+
+        {{ form_end(contactForm) }}
+
+
     </main>
 
 {% endblock %}

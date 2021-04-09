@@ -16,23 +16,18 @@
         <link rel="stylesheet" href="css/styleRegister.css">
         <link rel="stylesheet" href="css/styleContact.css">
         <link rel="icon" type="img/png" href="img/logo.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
 
         {% block stylesheets %}{% endblock %}
 
     </head>
 
     <header>
-        
-        {% if app.user %}
-                <div class="mb-3">
-                    Vous êtes connecté en tant que {{ app.user.username }}!
-                </div>
-        {% endif %}
-
         <div class="pos-f-t">
 
             <nav class="navbar navbar-dark bg-white">
-                <a href="http://localhost/horiza/public/" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
+                <a href="{{ path('home') }}" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,6 +40,9 @@
                     {# <a href="vehicules" class="text-dark">Rechercher</a> #}
                     <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
                     <a href="annonce/create" class="text-dark a-menu mr-3">Déposer une annonce</a>
+                {% if app.user %}
+                    <a href="annonce" class="text-dark a-menu mr-3">Gérer mes annonces</a>
+                {% endif %}
                 {% if app.user == null %}
                     <a href="register" class="text-dark a-menu mr-3">S'inscrire</a>
                     {% endif %}
@@ -52,17 +50,15 @@
                     <a href="login" class="text-dark a-menu mr-3">Se connecter</a>
                 {% endif %}
                 {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id != null %}
-                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="text-dark a-menu mr-3">Mon compte</a>
+                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="text-dark a-menu mr-3"><i class="fas fa-user"> Mon compte</a></i>
                 {% endif %}
                 {% if app.user %}
-                    <a href="{{ path('app_logout') }}" class="text-dark a-menu mr-3">Se déconnecter</a>
+                    <a href="{{ path('app_logout') }}" class="text-dark a-menu mr-3"><i class="fas fa-sign-out-alt"> Se déconnecter</a></i>
                 {% endif %}
                 </div>
                 
             </div>
-                <div class="title">
-                    <p class="title1">Horiza</p>
-                </div>
+                
 
           </div>
     </header>
@@ -90,10 +86,9 @@
         </div>
         <div class="contact">
             <a href="contact"><p class="text-white ml-2">Contactez-nous</p></a>
-            <a href="https://twitter.com/"><i class="fab fa-twitter text-white"></i></a>
-            <a href="https://instagram.com/"><i class="fab fa-instagram text-white"></i></a>
-            <a href="https://facebook.com/"><i class="fab fa-facebook-f text-white"></i></a>
+            <a href="https://twitter.com/" class="reseaux"><i class="fab fa-twitter text-white"></i></a>
+            <a href="https://instagram.com/" class="reseaux"><i class="fab fa-instagram text-white"></i></a>
+            <a href="https://facebook.com/" class="reseaux"><i class="fab fa-facebook-f text-white"></i></a>
         </div>
     </footer>
-    
 </html>
