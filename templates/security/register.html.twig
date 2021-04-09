@@ -7,10 +7,10 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
  <main class="container-fluid p-5 main-inscription">
-    <div class="col-5 offset-3">
+    <div class="col-5 offset-3 principal-register">
         <h1 class="col-5 offset-3 my-3 inscription">Inscription</h1>
         <div class="my-3 text-p-main">
-        <p>Rejoignez une grande communauté de voyageurs partout en France en 1 click</p>
+        <p>Rejoignez une grande communauté  partout en France en 1 click</p>
         </div>
 
         <form method="post" class="col-5 offset-3">
@@ -24,7 +24,7 @@
             <div class="my-3 largeur-form">
                 {{ form_row(registrationForm.nom) }}
             </div>
-            <div class="my-3 largeur-form">
+            <div class="my-3 largeur-form naissance">
                 {{ form_row(registrationForm.date_naissance) }}
             </div>   
             <div class="my-3 largeur-form">
@@ -48,10 +48,10 @@
             <div class="my-3 largeur-form">
                 {{ form_row(registrationForm.ville) }}
             </div>
-            <div class="my-3 largeur-form ">
+            <div class="my-3 largeur-form  validation-terme">
                 {{ form_row(registrationForm.agreeTerms) }}
             </div>
-
+            <p>Tout les champs doivent etre rempli</p>
             <div class="my-3 largeur-form">
             <button type="submit" class="btn btn-secondary my-3 submit-register">Je valide mon inscription !</button>
             {{ form_end(registrationForm) }}
