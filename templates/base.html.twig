@@ -37,10 +37,10 @@
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-white nav-secret" >
                     {# <a href="vehicules" class="text-dark">Rechercher</a> #}
-                    <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
-                    <a href="annonce/create" class="text-dark a-menu mr-3">Déposer une annonce</a>
+                    <a href="vehicules" class="text-dark a-menu mr-3"><i class="fas fa-handshake"> Louer un véhicule</a></i>
+                    <a href="annonce/create" class="text-dark a-menu mr-3"><i class="fas fa-pen-alt"> Déposer une annonce</a></i>
                 {% if app.user %}
-                    <a href="annonce" class="text-dark a-menu mr-3">Gérer mes annonces</a>
+                    <a href="annonce" class="text-dark a-menu mr-3"><i class="fas fa-list"> Gérer mes annonces</a></i>
                 {% endif %}
                 {% if app.user == null %}
                     <a href="register" class="text-dark a-menu mr-3">S'inscrire</a>
