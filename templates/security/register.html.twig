@@ -10,7 +10,7 @@
     <div class="col-5 offset-3 principal-register">
         <h1 class="col-5 offset-3 my-3 inscription">Inscription</h1>
         <div class="my-3 text-p-main">
-        <p>Rejoignez une grande communauté  partout en France en 1 click</p>
+        <p>Rejoignez une grande communauté partout en France en 1 click</p>
         </div>
 
         <form method="post" class="col-5 offset-3">
@@ -49,7 +49,7 @@
                 {{ form_row(registrationForm.ville) }}
             </div>
             <div class="my-3 largeur-form  validation-terme">
-                {{ form_row(registrationForm.agreeTerms) }}
+                <a href="cgu">{{ form_row(registrationForm.agreeTerms) }}</a>
             </div>
             <p>Tout les champs doivent etre rempli</p>
             <div class="my-3 largeur-form">
