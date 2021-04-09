@@ -5,6 +5,22 @@
 {% block body %}
     <main class"container-fluid bg-info">
         <div class="image">
+            <div class="card" style="width: 18rem;">
+                {# <img class="card-img-top" src="..." alt="Card image cap"> #}
+                <div class="card-body">
+                  <h5 class="card-title">Je souhaite louer un camping-car !</h5>
+                  {# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> #}
+                  <a href="vehicules" class="btn btn-primary">Trouver le camping-car de mes rêves</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                {# <img class="card-img-top" src="..." alt="Card image cap"> #}
+                <div class="card-body">
+                  <h5 class="card-title">Je souhaite déposer une annonce !</h5>
+                  {# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> #}
+                  <a href="annonce/create" class="btn btn-primary">Mettre mon camping-car en location</a>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-6 offset-3">
                     {% for label, messages in app.flashes %}
@@ -14,7 +30,8 @@
                     {% endfor %}
                 </div>
             </div>
-        </div>   
+        </div>
+
     </main>
 
     <footer class="container-fluid bg-info" class="accueil-footer">
@@ -25,26 +42,12 @@
                     <i class="fab fa-sistrix text-dark"></i>
                 </a>
             </div>
-            {# <div type="button">
-                <p>Favoris</p>
-                <i class="far fa-heart"></i>
-            </div> #}
             <div type="button">
                 <a href="">
                     <p class="text-dark text-decoration-none">Publier</p>
                     <i class="far fa-comment text-dark"></i>
                 </a>
             </div>
-            {# <div type="button">
-                <p>Voyages</p>
-                <i class="fas fa-shuttle-van"></i>
-            </div> #}
-            {# <div type="button">
-                <a href="profil">
-                    <p class="text-dark text-decoration-none">Mon compte</p>
-                    <i class="far fa-user text-dark"></i>
-                </a>
-            </div> #}
         </div>
     </footer>
     
