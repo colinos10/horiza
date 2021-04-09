@@ -28,7 +28,7 @@
             <nav class="navbar navbar-dark bg-white">
                 <a href="{{ path('home') }}" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="true" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
             </nav>
@@ -46,10 +46,10 @@
                     <a href="login" class="text-dark a-menu mr-3">Se connecter</a>
                 {% endif %}
                 {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id != null %}
-                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="text-dark a-menu mr-3">Mon compte</a>
+                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="text-dark a-menu mr-3"><i class="fas fa-user"> Mon compte</a></i>
                 {% endif %}
                 {% if app.user %}
-                    <a href="{{ path('app_logout') }}" class="text-dark a-menu mr-3">Se déconnecter</a>
+                    <a href="{{ path('app_logout') }}" class="text-dark a-menu mr-3"><i class="fas fa-sign-out-alt"> Se déconnecter</a></i>
                 {% endif %}
                 </div>
                 

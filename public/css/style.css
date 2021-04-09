@@ -32,8 +32,8 @@ div {
 
 header {
   background-color: white !important;
-  width: 100%;
-  position: fixed;
+  /* width: 100%;
+  position: fixed; */
 }
 
 /* ******************* LOGO ************************ */
