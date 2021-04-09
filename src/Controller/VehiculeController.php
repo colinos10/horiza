@@ -201,7 +201,7 @@ class VehiculeController extends AbstractController
                 $manager = $this->getDoctrine()->getManager(); // récupère le manager de Doctrine
                 $manager->persist($vehicule); // dit à Doctrine qu'on va vouloir sauvegarder en bdd
                 $manager->flush(); // exécute la requête
-                $this->addFlash('success', 'Le véhicule a bien été ajouté');
+                $this->addFlash('success', 'Félicitations ! Votre véhicule a bien été ajouté');
                 return $this->redirectToRoute('annonce');
             } else {
                 $this->addFlash('danger', 'Une erreur est survenue lors de l\'ajout du véhicule');
@@ -254,7 +254,7 @@ class VehiculeController extends AbstractController
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($vehicule);
             $manager->flush();
-            $this->addFlash('success', 'Le vehicule a bien été modifié');
+            $this->addFlash('success', 'Vos modifications ont bien été prises en compte !');
             return $this->redirectToRoute('annonce');
         }
         return $this->render('home/annonceForm.html.twig', [

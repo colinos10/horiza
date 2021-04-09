@@ -21,28 +21,13 @@
                         <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
                     </ul>
                 </div>
-                {# {% if vehicule.img2 is not null %}
-                    <div class="col-8 offset-2">
-                        <h2 class="py-3">Autres photos</h2>
-                        <img src="{{ asset('img/vehicule/' ~ vehicule.img2) }}" alt="photo principale {{ vehicule.marque }}" class="w-50">
-                    </div>
-                {% endif %} #}
-                {# {% if commentaires is not empty %}
-                    <div class="col-8 offset-2 pt-5">
-                        <h2 class="py-3">Commentaires</h2>
-                        <ul>
-                            {% for commentaire in commentaires %}
-                                <li>- {{ commentaire.commentaire }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endif %}} #}
             </div>
             <div class="card-body text-center">
                 <a href="{{ path('vehicule', {'id':vehicule.id}) }}" class="btn btn-outline-secondary">Voir plus</a>
             </div>
         {% endfor %}
         
+        <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
     </main>
 
 {% endblock %}

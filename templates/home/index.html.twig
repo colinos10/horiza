@@ -3,55 +3,17 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-
-    <header>
-        
-        {% if app.user %}
-                <div class="mb-3">
-                    Vous êtes connecté en tant que {{ app.user.username }}!
-                </div>
-        {% endif %}
-
-        <div class="pos-f-t">
-
-            <nav class="navbar navbar-dark bg-info">
-                <a href="http://localhost/horiza/public/" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </nav>
-            
-
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-info nav-secret" >
-                    {# <a href="vehicules" class="text-dark">Rechercher</a> #}
-                    <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
-                    <a href="annonce/create" class="text-dark a-menu mr-3">Déposer une annonce</a>
-                {% if app.user == null %}
-                    <a href="register" class="text-dark a-menu mr-3">S'inscrire</a>
-                    {% endif %}
-                {% if app.user == null %}
-                    <a href="login" class="text-dark a-menu mr-3">Se connecter</a>
-                {% endif %}
-                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id != null %}
-                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="text-dark a-menu mr-3">Mon compte</a>
-                {% endif %}
-                {% if app.user %}
-                    <a href="{{ path('app_logout') }}" class="text-dark a-menu mr-3">Se déconnecter</a>
-                {% endif %}
-                </div>
-                
-            </div>
-                <div class="title">
-                    <p class="title1">Horiza</p>
-                </div>
-
-          </div>
-    </header>
-
     <main class"container-fluid bg-info">
         <div class="image">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    {% for label, messages in app.flashes %}
+                        {% for message in messages %}
+                            <div class="flash-{{ label }} bg-{{ label }} text-light p-3 mb-5 rounded">{{ message }}</div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>   
     </main>
 
@@ -83,21 +45,6 @@
                     <i class="far fa-user text-dark"></i>
                 </a>
             </div> #}
-        </div>
-    </footer>
-    <footer class="bg-dark footer-bottom">
-        <div class="mpca">
-            <a href="mentions"><p class="text-white ml-2">Mentions Légales</p></a>
-            <a href="politique"><p class="text-white ml-2">Politique de confidentialité</p></a>
-            <a href="cgu"><p class="text-white ml-2">CGU - CGV</p></a>
-            <a href="about"><p class="text-white ml-2">À propos de nous</p></a>
-            
-        </div>
-        <div class="contact">
-            <a href="contact"><p class="text-white ml-2">Contactez-nous</p></a>
-            <a href="https://twitter.com/"><i class="fab fa-twitter text-white"></i></a>
-            <a href="https://instagram.com/"><i class="fab fa-instagram text-white"></i></a>
-            <a href="https://facebook.com/"><i class="fab fa-facebook-f text-white"></i></a>
         </div>
     </footer>
     

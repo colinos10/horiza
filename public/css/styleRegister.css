@@ -13,17 +13,17 @@
   }
 
   /* la class bootstrapp */
-.my-3{
+  .my-3{
   text-align: end;
 }
 
 /* la class bootstrapp */
-.p5{
+ .p5{
   padding: 1rem!important;
 }
 
 /* tout le main de la page , surtout utiliser la pour la photo de fond et la couleurs des textes  */
-.main-inscription{
+ .main-inscription{
   background-image: url(https://media.discordapp.net/attachments/430039498470981644/829829894271533056/photo-1470115636492-6d2b56f9146d.png);
   width: 100%;
   background-repeat: no-repeat;

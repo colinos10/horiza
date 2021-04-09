@@ -9,6 +9,16 @@
 
     <h1 class="pb-5">Mes annonces</h1>
 
+    <div class="row">
+        <div class="col-6 offset-3">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="flash-{{ label }} bg-{{ label }} text-light p-3 mb-5 rounded">{{ message }}</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+
     <table class="table table-bordered table-dark text-center table-hover table-sm">
         <thead>
             <tr>
@@ -56,6 +66,8 @@
     
     <div class="text-right my-5">
         <a href="{{ path('annonce_create') }}" class="btn btn-outline-dark">Ajouter un véhicule</a>
+        <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
+
     </div>
 
 </div>
