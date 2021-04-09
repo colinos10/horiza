@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/styleRegister.css">
         <link rel="icon" type="img/png" href="img/logo.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
 
         {% block stylesheets %}{% endblock %}
 
@@ -22,18 +24,20 @@
 
     <header>
         
-        {% if app.user %}
-                <div class="mb-3">
-                    Vous êtes connecté en tant que {{ app.user.username }}!
-                </div>
-        {% endif %}
-
+        {# {% if app.user %}
+            <div class="mb-3">
+                Vous êtes connecté en tant que {{ app.user.username }}!
+            </div>
+        {% endif %} #}
+        <div class="title">
+            <p class="title1">Horiza</p>
+        </div>
         <div class="pos-f-t">
 
             <nav class="navbar navbar-dark bg-white">
                 <a href="http://localhost/horiza/public/" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
             </nav>
@@ -59,9 +63,7 @@
                 </div>
                 
             </div>
-                <div class="title">
-                    <p class="title1">Horiza</p>
-                </div>
+                
 
           </div>
     </header>
@@ -94,5 +96,4 @@
             <a href="https://facebook.com/"><i class="fab fa-facebook-f text-white"></i></a>
         </div>
     </footer>
-    
 </html>
