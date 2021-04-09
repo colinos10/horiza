@@ -6,31 +6,57 @@
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
- <main class="container-fluid p-5 text-center my-3">
-    <h1 class="col-12 text-center my-3 inscription">Inscription</h1>
-
-    <form method="post" class="">
-    {{ form_start(registrationForm) }}
-        <div class="form">
-        {{ form_row(registrationForm.civilite) }}
-        {{ form_row(registrationForm.prenom) }}
-        <div class="my-3">
-            {{ form_row(registrationForm.nom) }}
+ <main class="container-fluid p-5 main-inscription">
+    <div class="col-5 offset-3">
+        <h1 class="col-5 offset-3 my-3 inscription">Inscription</h1>
+        <div class="my-3 text-p-main">
+        <p>Rejoignez une grande communauté de voyageurs partout en France en 1 click</p>
         </div>
-        {{ form_row(registrationForm.date_naissance) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword) }}
-        {{ form_row(registrationForm.tel) }}
-        {{ form_row(registrationForm.img1) }}
-        {{ form_row(registrationForm.adresse) }}
-        {{ form_row(registrationForm.code_postal) }}
-        {{ form_row(registrationForm.ville) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Je valide mon inscription !</button>
-        {{ form_end(registrationForm) }}
-        </div> 
-    </form>
+        <form method="post" class="col-5 offset-3">
+        {{ form_start(registrationForm) }}
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.civilite) }}
+            </div>
+            <div class="my-3 largeur-form ">
+                {{ form_row(registrationForm.prenom) }}
+            </div>
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.nom) }}
+            </div>
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.date_naissance) }}
+            </div>   
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.email) }}
+            </div>
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.plainPassword) }}
+            </div>
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.tel) }}
+            </div>
+            <div class="my-3 image-formulaire-register  largeur-form">
+                {{ form_row(registrationForm.img1) }}
+            </div>
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.adresse) }}
+            </div>
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.code_postal) }}
+            </div>
+            <div class="my-3 largeur-form">
+                {{ form_row(registrationForm.ville) }}
+            </div>
+            <div class="my-3 largeur-form ">
+                {{ form_row(registrationForm.agreeTerms) }}
+            </div>
 
+            <div class="my-3 largeur-form">
+            <button type="submit" class="btn btn-secondary my-3 submit-register">Je valide mon inscription !</button>
+            {{ form_end(registrationForm) }}
+            </div> 
+        </form>
+    </div>
 </main>
 {% endblock %}

@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ProfilController extends AbstractController
 {
     /**
-     * @Route("/profil-{id}", name="profile")
+     * @Route("/profil-{id}", name="profil")
      */
     public function index(UserRepository $userRepository, $id): Response
     {

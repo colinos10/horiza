@@ -34,16 +34,16 @@
                         {% if is_granted('ROLE_SUPER_ADMIN') %}
                             <a href="{{ path('admin_users') }}" title="utilisateurs"><li><i class="fas fa-users"></i></li></a>
                         {% endif %}
-                        <a href="{{ path('app_logout') }}" title="déconnexion"><li><i class="fas fa-user-times"></i></li></a>
+                        <a href="{{ path('app_login') }}" title="déconnexion"><li><i class="fas fa-user-times"></i></li></a>
                         <a href="{{ path('home') }}" title="accueil du site"><li><i class="fas fa-door-open"></i></li></a>
                     </ul>
                 </nav>
                 <div class="col-11 p-5">
-                    {% for label, messages in app.flashes %}
+                    {# {% for label, messages in app.flashes %}
                         {% for message in messages %}
                             <div class="flash-{{ label }} bg-{{ label }} text-light p-3 mb-5 rounded">{{ message }}</div>
                         {% endfor %}
-                    {% endfor %}
+                    {% endfor %} #}
                     {% block body %}{% endblock %}
                 </div>
             </div>

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Déposer une annonce de véhicule{% endblock %}
+
+{% block body %}
+
+    <h1>Déposer une annonce de véhicule</h1>
+
+    <div>
+        {{ form_start(vehiculeForm) }}
+        {{ form_end(vehiculeForm) }}
+    </div>
+
+    <div class="text-center pb-5">
+        <a href="{{ path('home') }}" class="btn btn-danger">Annuler</a>
+    </div>
+
+{% endblock %}

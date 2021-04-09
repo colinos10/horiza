@@ -4,18 +4,46 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-  }
-
-
-  .inscription{
-      font-size: 40px;
-  }
-
-  .form{
-    border: 1px solid #eee;
-    padding: 30px 20px;
-    border-radius: 3px;
-    margin-bottom: 30px;
-    position: relative;
-}
+    }
   
+
+.inscription{
+      font-weight: bold;
+      
+  }
+
+.my-3{
+  text-align: end;
+}
+
+.p5{
+  padding: 1rem!important;
+}
+
+.main-inscription{
+  background-image: url(https://media.discordapp.net/attachments/430039498470981644/829829894271533056/photo-1470115636492-6d2b56f9146d.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: snow;
+}
+
+.text-p-main{
+  margin-bottom: 50px !important;
+}
+
+.submit-register {
+  background-color: orangered !important;
+}
+.image-formulaire-register{
+  display: flex;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  text-align: initial;
+}
+
+.largeur-form{
+  display: flex;
+  text-align: start;
+}
