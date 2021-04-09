@@ -6,12 +6,16 @@
 
     <header>
         
+<<<<<<< HEAD
+        
+=======
         {% if app.user %}
                 <div class="mb-3">
-                    Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">déconnexion</a>
+                    Vous êtes connecté en tant que {{ app.user.username }}!
                 </div>
         {% endif %}
 
+>>>>>>> 2b44e058087e409881d008ced47e289d8e087ac8
         <div class="pos-f-t">
 
             <nav class="navbar navbar-dark bg-info">
@@ -25,20 +29,34 @@
 
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-info nav-secret" >
+<<<<<<< HEAD
+                  {# <a href="vehicules" class="text-dark">Rechercher</a> #}
+                  <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
+                  <a href="#" class="text-dark a-menu mr-3">Déposer une annonce</a>
+                  <a href="register" class="text-dark a-menu mr-3">S'inscrire</a>
+                  <a href="login" class="text-dark a-menu mr-3">Se connecter</a>
+=======
                     {# <a href="vehicules" class="text-dark">Rechercher</a> #}
                     <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
                     <a href="annonce/create" class="text-dark a-menu mr-3">Déposer une annonce</a>
+                {% if app.user == null %}
                     <a href="register" class="text-dark a-menu mr-3">S'inscrire</a>
+                    {% endif %}
+                {% if app.user == null %}
                     <a href="login" class="text-dark a-menu mr-3">Se connecter</a>
-                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id != null %}
-                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="text-dark a-menu mr-3">Mon profil/Mon compte</a>
                 {% endif %}
+                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id != null %}
+                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="text-dark a-menu mr-3">Mon compte</a>
+                {% endif %}
+                {% if app.user %}
+                    <a href="{{ path('app_logout') }}" class="text-dark a-menu mr-3">Se déconnecter</a>
+                {% endif %}
+>>>>>>> 2b44e058087e409881d008ced47e289d8e087ac8
                 </div>
                 
             </div>
-                <div class="tittle">
-                    <p class="tittle1">Hor</p>
-                    <p class="tittle2">iza</p>
+                <div class="title">
+                    <p class="title1">Horiza</p>
                 </div>
 
           </div>
@@ -46,56 +64,6 @@
 
     <main class"container-fluid bg-info">
         <div class="image">
-            <div class="spider">
-                <div class="formulaire">
-                    <h1 class"text-h1">Location de camping cars et de van aménagés en France</h1>
-                    <div class="barre-recherche">
-                        <form class="col ml-3 mb-2" role="search">
-                            <div class="type-vehicule">
-                                <label for="main-q" class="visually-hidden">Type de véhicule</label>
-                                <select name="" id="" class="pointer">
-                                    <option value="">Choisissez un type de véhicule dans la liste</option>
-                                    <option value="">Camping-car</option>
-                                    <option value="">Van</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="main-q" class="visually-hidden">Où voulez-vous louer ?</label>
-                                <select name="" id="" class="pointer">
-                                    <option value="">Choisissez une ville dans la liste</option>
-                                    <option value="">Lille</option>
-                                    <option value="">Saint-Quentin</option>
-                                    <option value="">Paris</option>
-                                    <option value="">Rouen</option>
-                                    <option value="">Caen</option>
-                                    <option value="">Strasbourg</option>
-                                    <option value="">Troyes</option>
-                                    <option value="">Rennes</option>
-                                    <option value="">Brest</option>
-                                    <option value="">Dijon</option>
-                                    <option value="">Orléans</option>
-                                    <option value="">Tours</option>
-                                    <option value="">Nantes</option>
-                                    <option value="">Clermont-Ferrand</option>
-                                    <option value="">Lyon</option>
-                                    <option value="">Poitiers</option>
-                                    <option value="">Brive-la-Gaillarde</option>
-                                    <option value="">Bordeaux</option>
-                                    <option value="">Montpellier</option>
-                                    <option value="">Toulouse</option>
-                                    <option value="">Avignon</option>
-                                    <option value="">Marseille</option>
-                                    <option value="">Ajaccio</option>
-                                </select>
-                            </div>
-                            <div class="recherche">
-                                <button class="text-right text-dark button-rechercher">Rechercher</button>
-                            </div>
-                                
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>   
     </main>
 
@@ -112,7 +80,7 @@
                 <i class="far fa-heart"></i>
             </div> #}
             <div type="button">
-                <a href="annonce/create">
+                <a href="">
                     <p class="text-dark text-decoration-none">Publier</p>
                     <i class="far fa-comment text-dark"></i>
                 </a>
@@ -139,6 +107,9 @@
         </div>
         <div class="contact">
             <a href="contact"><p class="text-white ml-2">Contactez-nous</p></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter text-white"></i></a>
+            <a href="https://instagram.com/"><i class="fab fa-instagram text-white"></i></a>
+            <a href="https://facebook.com/"><i class="fab fa-facebook-f text-white"></i></a>
         </div>
     </footer>
     
