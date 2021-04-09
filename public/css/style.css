@@ -19,22 +19,15 @@ header {
   width: 15%;
 }
 
-
-
 /* Titre Horiza */ /*titre a fusionner avec le logo pour un meilleur visuel  */
-.tittle {
+.title {
   display: flex;
   font-size: 3em;
   justify-content: center;
 }
-.tittle1 {
+.title1 {
   color: #f39233;
 }
-
-.tittle2 {
-  color: #B8DE6F;
-}
-
 
 /* zone de la balise a  */
 .liens-a {
