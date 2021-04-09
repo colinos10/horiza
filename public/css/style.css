@@ -41,10 +41,6 @@ header {
   display: contents;
 }
 
-.nav-secret{
-  display: flex;
-}
-
 /* la classe nav */
 .navbar {
   align-items: end;
@@ -63,11 +59,8 @@ header {
   background-color: #F39233;
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> bb204942f47ebf27a885a12d257ce14cd06f9d76
 /* div menu burger */
 .bg-info {
   background-color: white !important;
@@ -164,4 +157,6 @@ header {
 .contact {
   margin-left: auto;
   margin-right: 5px;
+
+  display: grid;
 }
