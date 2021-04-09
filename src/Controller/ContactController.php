@@ -43,7 +43,7 @@ class ContactController extends AbstractController
                 $mail->attach($pieceJointe); // attache la pièce-jointe au corps du mail
             }
             $mailer->send($mail); // envoit le mail
-            $this->addFlash('success', 'Votre message a bien été envoyé !'); // message de succès
+            $this->addFlash('success', 'Merci de nous avoir contactés ! Notre équipe se charge de vous répondre dans les plus brefs délais.'); // message de succès
             return $this->redirectToRoute('contact'); // redirection
         }
         return $this->render('contact/contact.html.twig', [
