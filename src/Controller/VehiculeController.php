@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Vehicule;
 use App\Form\VehiculeType;
+use App\Repository\UserRepository;
 use App\Repository\VehiculeRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -164,20 +165,23 @@ class VehiculeController extends AbstractController
 
 
     /**
-    * @Route("/annonce", name="annonce")
-    */
-   public function annonces(VehiculeRepository $vehiculeRepository)
-   {
-       $vehicules = $vehiculeRepository->findAll();
-       return $this->render('home/annonce.html.twig', [
-           'vehicules' => $vehicules,
-       ]);
-   }
+     * @Route("/annonce", name="annonce")
+     */
+    public function annonces(VehiculeRepository $vehiculeRepository, UserRepository $userRepository)
+    {
+        // $user = $userRepository->find($this->getUser()->getId());
+        $vehicules = $vehiculeRepository->findBy(["user" => $this->getUser()->getId()]);
+        return $this->render('home/annonce.html.twig', [
+            'vehicules' => $vehicules,
+        ]);
+    }
+
+   
 
     /**
      * @Route("/annonce/create", name="annonce_create")
      */
-    public function creerVehicule(Request $request)
+    public function creerVehicule(Request $request, UserRepository $userRepository)
     {
         $vehicule = new Vehicule(); // création d'une nouvelle vehicule
         $form = $this->createForm(VehiculeType::class, $vehicule); // création du formulaire avec en paramètre la nouvelle vehicule
@@ -198,6 +202,8 @@ class VehiculeController extends AbstractController
                 } else {
                     $vehicule->setImg2(null); // définit le nom de l'image à mettre en bdd si pas d'image 2
                 }
+                $user = $userRepository->find($this->getUser()->getId());
+                $vehicule->setUser($user);
                 $manager = $this->getDoctrine()->getManager(); // récupère le manager de Doctrine
                 $manager->persist($vehicule); // dit à Doctrine qu'on va vouloir sauvegarder en bdd
                 $manager->flush(); // exécute la requête

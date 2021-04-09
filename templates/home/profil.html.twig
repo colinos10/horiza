@@ -3,52 +3,55 @@
 {% block title %}Mon Compte{% endblock %}
 
 {% block body %}
-    <header class="container-fluid text-center bg-info pt-5 pb-5">
+    <div class="container-fluid text-center bg-info pt-5 pb-5">
         <h1> Mon Compte</h1>
-    </header>
+    </div>
     <main class="container-fluid pl-5 mt-5">
         <h3> Informations personnelles</h3>
-
-        <table class="table table-bordered table-dark text-center table-hover table-sm">
-            <thead>
-                <tr>
-                    <th>Email</th>
-                    {# <th>Mot de passe</th> #}
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Téléphone</th>
-                    {# <th>Photo principale</th> #}
-                    <th>Civilité</th>
-                    <th>Adresse</th>
-                    <th>Code postal</th>
-                    <th>Ville</th>
-                    {# <th>Date de naissance</th> #}
-                    <th>Modifier</th>
-                    <th>Supprimer</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="align-middle">{{ user.email }}</td>
-                    {# <td class="align-middle">{{ user.password }}</td> #}
-                    <td class="align-middle">{{ user.nom }}</td>
-                    <td class="align-middle">{{ user.prenom }}</td>
-                    <td class="align-middle">{{ user.tel }}</td>
-                    {# <td class="align-middle">{{ user.img1 }}</td> #}
-                    <td class="align-middle">{{ user.civilite }}</td>
-                    <td class="align-middle">{{ user.adresse }}</td>
-                    <td class="align-middle">{{ user.codePostal }}</td>
-                    <td class="align-middle">{{ user.ville }}</td>
-                    {# <td class="align-middle">{{ user.dateNaissance }}</td> #}
-    
-                    <td class="align-middle">
-                        <a href="{{ path('profil_update', {'id':user.id}) }}"><i class="fas fa-pen-square"></i></a>
-                    </td>
-                    <td>
-                        <a href="{{ path('profil_delete', {'id':user.id}) }}"><i class="fas fa-trash-alt"></i></a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        {% if user.id is same as app.user.id %}
+            <table class="table table-bordered table-dark text-center table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        {# <th>Mot de passe</th> #}
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Téléphone</th>
+                        {# <th>Photo principale</th> #}
+                        <th>Civilité</th>
+                        <th>Adresse</th>
+                        <th>Code postal</th>
+                        <th>Ville</th>
+                        {# <th>Date de naissance</th> #}
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="align-middle">{{ user.email }}</td>
+                        {# <td class="align-middle">{{ user.password }}</td> #}
+                        <td class="align-middle">{{ user.nom }}</td>
+                        <td class="align-middle">{{ user.prenom }}</td>
+                        <td class="align-middle">{{ user.tel }}</td>
+                        {# <td class="align-middle">{{ user.img1 }}</td> #}
+                        <td class="align-middle">{{ user.civilite }}</td>
+                        <td class="align-middle">{{ user.adresse }}</td>
+                        <td class="align-middle">{{ user.codePostal }}</td>
+                        <td class="align-middle">{{ user.ville }}</td>
+                        {# <td class="align-middle">{{ user.dateNaissance }}</td> #}
+        
+                        <td class="align-middle">
+                            <a href="{{ path('profil_update', {'id':user.id}) }}"><i class="fas fa-pen-square"></i></a>
+                        </td>
+                        <td>
+                            <a href="{{ path('profil_delete', {'id':user.id}) }}"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        {% else %}
+            <p>Vous n'avez pas les droits pour accéder à cette page</p>
+        {% endif %}
     </main>
 {% endblock %}
