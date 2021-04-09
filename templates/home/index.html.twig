@@ -6,16 +6,12 @@
 
     <header>
         
-<<<<<<< HEAD
-        
-=======
         {% if app.user %}
                 <div class="mb-3">
                     Vous êtes connecté en tant que {{ app.user.username }}!
                 </div>
         {% endif %}
 
->>>>>>> 2b44e058087e409881d008ced47e289d8e087ac8
         <div class="pos-f-t">
 
             <nav class="navbar navbar-dark bg-info">
@@ -29,13 +25,6 @@
 
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-info nav-secret" >
-<<<<<<< HEAD
-                  {# <a href="vehicules" class="text-dark">Rechercher</a> #}
-                  <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
-                  <a href="#" class="text-dark a-menu mr-3">Déposer une annonce</a>
-                  <a href="register" class="text-dark a-menu mr-3">S'inscrire</a>
-                  <a href="login" class="text-dark a-menu mr-3">Se connecter</a>
-=======
                     {# <a href="vehicules" class="text-dark">Rechercher</a> #}
                     <a href="vehicules" class="text-dark a-menu mr-3">Louer un véhicule</a>
                     <a href="annonce/create" class="text-dark a-menu mr-3">Déposer une annonce</a>
@@ -51,7 +40,6 @@
                 {% if app.user %}
                     <a href="{{ path('app_logout') }}" class="text-dark a-menu mr-3">Se déconnecter</a>
                 {% endif %}
->>>>>>> 2b44e058087e409881d008ced47e289d8e087ac8
                 </div>
                 
             </div>
