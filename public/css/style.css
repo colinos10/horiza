@@ -77,6 +77,14 @@ header {
 
 }
 
+.navbar-bar{
+  display: contents;
+}
+
+#nav {
+  display: flex;
+}
+
 
 /* la classe bouton */
 .navbar-toggler {
