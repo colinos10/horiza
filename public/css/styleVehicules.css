@@ -1,0 +1,50 @@
+.image-vehicules{
+    width: 100%;
+    position: absolute;
+    inset: 0px;
+    margin: auto;
+    display: initial;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* 
+.main-vehicules{
+  background-image: url(https://media.discordapp.net/attachments/813714784452870145/827085718450077706/photo-1580732055671-e64dde2eb75b.png);
+ width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; } */
+  
+
+.principal-main-vehicules{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;;
+}
+
+.premier-titre-vehicules{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.deuxieme-titre-vehicules{
+    padding-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.zone-vehicules{
+    display: flex;
+}
+
+.alpha{
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    padding: 0px;
+}
