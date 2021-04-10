@@ -1,14 +1,16 @@
+
+/* La taille des images des annonces */
 .taille-image{
     max-width: 34em;
     float: right;
     width: 64%;
 }
-
+/* pour la marque du vehicules */
 .premier-titre-vehicules{
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-
+/* pour le modele du vehicules */
 .deuxieme-titre-vehicules{
     padding-bottom: 1rem;
     font-size: 18px;
@@ -16,7 +18,7 @@
 }
 
 
-
+/* reprensente la bordures autour de l'annonce  */
 .alpha{
     border-style: solid;
     border-width: 0.1rem;
@@ -25,7 +27,7 @@
     padding: 0px;
 }
 
-
+/* represente le texte de l'annonces */
 .text-vehicules{
     width: 50%;
     height: 100%;
@@ -36,6 +38,7 @@
 }
 
 
+/* pour la tailles de l'annonces avec en dessous les media query changent cela */
 .agencement-vehicules{
     max-width: 66.666667%;
     margin-left: 30em;
