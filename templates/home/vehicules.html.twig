@@ -12,7 +12,7 @@
         {% for vehicule in vehicules %}
             <div class="row p-5">
                 <div class="col-8 offset-2">
-                    <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale {{ vehicule.marque }}" class="w-100">
+                    <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale {{ vehicule.marque }}" class="taille-image">
                     <h2 class="py-3">{{ vehicule.marque }}</h2>
                     <p>{{ vehicule.modele }}</p>
                     <ul>
