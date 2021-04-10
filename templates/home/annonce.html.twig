@@ -1,13 +1,13 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %}Mes annonces!{% endblock %}
+{% block title %}Mes annonces{% endblock %}
 
 {% block body %}
 
 <div>
 
-    <h1 class="pb-5">Mes annonces</h1>
+    <h1 class="pb-5 text-center">Mes annonces</h1>
 
     <div class="row">
         <div class="col-6 offset-3">
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <table class="table table-bordered table-dark text-center table-hover table-sm">
+    <table class="table table-bordered table-secondary text-center table-hover table-sm">
         <thead>
             <tr>
                 <th>N°</th>
@@ -51,7 +51,7 @@
                     <td class="align-middle">{{ vehicule.couleur }}</td>
                     <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img1 }}" alt="photo principale vehicule {{ loop.index }}"></td>
                     <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img2 }}" alt="photo secondaire vehicule {{ loop.index }}"></td>
-                    <td class="align-middle">{{ vehicule.prix|number_format(0, ',', ' ') }}</td>
+                    <td class="align-middle">{{ vehicule.prix|number_format(0, ',', ' ') }} €</td>
                     <td class="align-middle">{{ vehicule.disponibilite }}</td>
                     <td class="align-middle">
                         <a href="{{ path('annonce_update', {'id':vehicule.id}) }}"><i class="fas fa-pen-square"></i></a>
@@ -65,8 +65,9 @@
     </table>
     
     <div class="text-right my-5">
-        <a href="{{ path('annonce_create') }}" class="btn btn-outline-dark">Ajouter un véhicule</a>
-        <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
+    <a href="{{ path('home') }}" type="button" class="btn btn-light">Retour à la page d'accueil</a>
+        <a href="{{ path('annonce_create') }}" class="btn btn-success">Ajouter un véhicule</a>
+        
 
     </div>
 
