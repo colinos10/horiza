@@ -17,7 +17,7 @@ class VehiculeController extends AbstractController
      * @Route("/vehicule-{id}", name="vehicule")
      */
     public function vehicule(VehiculeRepository $vehiculeRepository, $id)
-    {
+    {   
         $vehicule = $vehiculeRepository->find($id);
         // $commentaires = $vehicule->getCommentaires();
         return $this->render('home/vehicule.html.twig', [
