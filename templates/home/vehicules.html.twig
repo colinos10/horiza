@@ -8,25 +8,28 @@
         <h1>Location camping-cars</h1>
     </div>
 
-    <main class="main-vehicules">
-        <div class=" principal-main-vehicules" >
+    <main class="main-vehicules principal-main-vehicules">
+        <div class="" >
              <div class="">
 
                 <div class="zone-vehicules">   
                 {% for vehicule in vehicules %}
-                    <div class="row p-5">
-                        <div class="col-8 offset-2 alpha">
-                            <div class="image-vehicules">
-                                <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale {{ vehicule.marque }}" class="taille-image">
-                            </div>
+                    <div class="row agencement-vehicules">
+                        <div class="alpha  ">
                             
-                            <h2 class="premier-titre-vehicules">{{ vehicule.marque }}</h2>
-                            <p  class="deuxieme-titre-vehicules" >{{ vehicule.modele }}</p>
-                            <ul>
-                                <li>Nombre de places : {{ vehicule.nombrePlace }}</li>
-                                <li>Couleur : {{ vehicule.couleur }} </li>
-                                <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
-                            </ul>
+                                <div class="image-vehicules">
+                                    <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale {{ vehicule.marque }}" class="taille-image">
+                                </div>
+                                <div class="text-vehicules">
+                                    <h2 class="premier-titre-vehicules">{{ vehicule.marque }}</h2>
+                                    <p  class="deuxieme-titre-vehicules" >{{ vehicule.modele }}</p>
+                                    <ul>
+                                        <li>Nombre de places : {{ vehicule.nombrePlace }}</li>
+                                        <li>Couleur : {{ vehicule.couleur }} </li>
+                                        <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
+                                    </ul>
+                                </div>
+                            
                         </div>
                         </div>
                     </div>

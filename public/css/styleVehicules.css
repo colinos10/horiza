@@ -1,29 +1,7 @@
-.image-vehicules{
-    width: 100%;
-    position: absolute;
-    inset: 0px;
-    margin: auto;
-    display: initial;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-}
-
-/* 
-.main-vehicules{
-  background-image: url(https://media.discordapp.net/attachments/813714784452870145/827085718450077706/photo-1580732055671-e64dde2eb75b.png);
- width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; } */
-  
-
-.principal-main-vehicules{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;;
+.taille-image{
+    max-width: 34em;
+    float: right;
+    width: 64%;
 }
 
 .premier-titre-vehicules{
@@ -37,9 +15,7 @@
     font-weight: 600;
 }
 
-.zone-vehicules{
-    display: flex;
-}
+
 
 .alpha{
     border-style: solid;
@@ -48,3 +24,94 @@
     overflow: hidden;
     padding: 0px;
 }
+
+
+.text-vehicules{
+    width: 50%;
+    height: 100%;
+    font-size: 19px;
+    padding-top: 8px;
+    text-decoration: underline;
+    
+}
+
+
+.agencement-vehicules{
+    max-width: 66.666667%;
+    margin-left: 30em;
+}
+
+
+
+@media(min-width : 400px) and (max-width : 540px) {
+    .agencement-vehicules , .taille-image{
+    margin-left: 4em ;
+    width: 16em;
+}
+}
+
+@media (min-width: 540px) and (max-width: 614px){
+.agencement-vehicules, .taille-image {
+    margin-left: 9em;
+    width: 20em
+}
+}
+
+
+
+@media(min-width : 614px) and (max-width : 768px) {
+    .agencement-vehicules , .taille-image{
+    margin-left: 10em ;
+    width: 22em;
+}
+}
+
+
+@media (min-width: 768px) and (max-width : 850px) {
+    .agencement-vehicules {
+    margin-left: 10em ;
+}
+}
+
+
+
+@media (min-width: 850px) and (max-width : 1100px) {
+    .agencement-vehicules {
+    margin-left: 16em ;
+}
+}
+
+
+
+
+@media (min-width: 1100px) and (max-width : 1400px) {
+    .agencement-vehicules {
+    margin-left: 24em ;
+}
+}
+
+@media (min-width: 1400px) and (max-width : 1800px) {
+    .agencement-vehicules {
+    margin-left: 35em ;
+}
+}
+
+
+@media (min-width: 1800px) and (max-width : 2000px) {
+    .agencement-vehicules {
+        margin-left: 40em ;
+}
+}
+    
+
+@media (min-width: 2000px) and (max-width : 2300px) {
+    .agencement-vehicules {
+            margin-left: 50em ;
+    }
+    }
+
+@media (min-width: 2300px) {
+    .agencement-vehicules {
+            margin-left: 61em;
+        }
+        }
