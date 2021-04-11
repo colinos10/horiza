@@ -8,37 +8,29 @@
         <h1>Location camping-cars et van</h1>
     </div>
 
-    <main class="main-vehicules principal-main-vehicules">
-        <div class="" >
-             <div class="">
+    <main class="row row-cols-1 row-cols-md-1 g-4 main-vehicules">
+        <div class="col">
+            <div class="card h-100">
 
-                <div class="zone-vehicules">   
+                <div>   
                 {% for vehicule in vehicules %}
-                    <div class="row agencement-vehicules">
-                        <div class="alpha  ">
-                            
-                                <div class="image-vehicules">
-                                    <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale {{ vehicule.marque }}" class="taille-image">
-                                </div>
-                                <div class="text-vehicules">
-                                    <h2 class="premier-titre-vehicules">{{ vehicule.marque }}</h2>
-                                    <p  class="deuxieme-titre-vehicules" >{{ vehicule.modele }}</p>
+                                    <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale" {{ vehicule.marque }} class="card-img-top">
+
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ vehicule.marque }}</h2>
+                                    <p class="card-title">{{ vehicule.modele }}</p>
                                     <ul>
-                                        <li>Nombre de places : {{ vehicule.nombrePlace }}</li>
-                                        <li>Couleur : {{ vehicule.couleur }} </li>
-                                        <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
+                                        <li class="card-text">Nombre de places : {{ vehicule.nombrePlace }}</li>
+                                        <li class="card-text">Couleur : {{ vehicule.couleur }} </li>
+                                        <li class="card-text">Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
                                     </ul>
                                 </div>
-                            
-                        </div>
-                        </div>
-                    </div>
+                        
                     <div class="card-body text-center">
                         <a href="{{ path('vehicule', {'id':vehicule.id}) }}" class="btn btn-outline-secondary">Voir plus</a>
                 </div>
             {% endfor %}
             </div>
-            
             <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
         </div>
     </main>
