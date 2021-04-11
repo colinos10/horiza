@@ -1,0 +1,120 @@
+
+/* La taille des images des annonces */
+.taille-image{
+    max-width: 34em;
+    float: right;
+    width: 64%;
+}
+/* pour la marque du vehicules */
+.premier-titre-vehicules{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+/* pour le modele du vehicules */
+.deuxieme-titre-vehicules{
+    padding-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* reprensente la bordures autour de l'annonce  */
+.alpha{
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    padding: 0px;
+}
+
+/* represente le texte de l'annonces */
+.text-vehicules{
+    width: 50%;
+    height: 100%;
+    font-size: 19px;
+    padding-top: 8px;
+    text-decoration: underline;
+    
+}
+
+
+/* pour la tailles de l'annonces avec en dessous les media query changent cela */
+.agencement-vehicules{
+    max-width: 66.666667%;
+    margin-left: 30em;
+}
+
+
+
+@media(min-width : 400px) and (max-width : 540px) {
+    .agencement-vehicules , .taille-image{
+    margin-left: 4em ;
+    width: 16em;
+}
+}
+
+@media (min-width: 540px) and (max-width: 614px){
+.agencement-vehicules, .taille-image {
+    margin-left: 9em;
+    width: 20em
+}
+}
+
+
+
+@media(min-width : 614px) and (max-width : 768px) {
+    .agencement-vehicules , .taille-image{
+    margin-left: 10em ;
+    width: 22em;
+}
+}
+
+
+@media (min-width: 768px) and (max-width : 850px) {
+    .agencement-vehicules {
+    margin-left: 10em ;
+}
+}
+
+
+
+@media (min-width: 850px) and (max-width : 1100px) {
+    .agencement-vehicules {
+    margin-left: 16em ;
+}
+}
+
+
+
+
+@media (min-width: 1100px) and (max-width : 1400px) {
+    .agencement-vehicules {
+    margin-left: 24em ;
+}
+}
+
+@media (min-width: 1400px) and (max-width : 1800px) {
+    .agencement-vehicules {
+    margin-left: 35em ;
+}
+}
+
+
+@media (min-width: 1800px) and (max-width : 2000px) {
+    .agencement-vehicules {
+        margin-left: 40em ;
+}
+}
+    
+
+@media (min-width: 2000px) and (max-width : 2300px) {
+    .agencement-vehicules {
+            margin-left: 50em ;
+    }
+    }
+
+@media (min-width: 2300px) {
+    .agencement-vehicules {
+            margin-left: 61em;
+        }
+        }

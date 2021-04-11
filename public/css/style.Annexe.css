@@ -1,0 +1,49 @@
+/* ******************** RESET ******************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+ /* *************************** MENTION LEGAL******************************* */
+.contenu-page-mention{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.contenu-page-mention p {
+    line-height: 1.5;
+}
+
+.contenu-page-mention h3 {
+    font-size: 24px;
+    color: #F39233;
+}
+
+.conteneur-mention{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+
+
+/* *********************************POLITIQUE************************* */
+
+.containeur-politique{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.tete-du-main{
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 30px 0 0;
+    text-align: center;
+}

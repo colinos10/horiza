@@ -5,29 +5,42 @@
 {% block body %}
 
     <div class="container-fluid p-5 text-center bg-light">
-        <h1>Location camping-cars</h1>
+        <h1>Location camping-cars et van</h1>
     </div>
 
-    <main class="container-fluid">
-        {% for vehicule in vehicules %}
-            <div class="row p-5">
-                <div class="col-8 offset-2">
-                    <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale {{ vehicule.marque }}" class="w-100">
-                    <h2 class="py-3">{{ vehicule.marque }}</h2>
-                    <p>{{ vehicule.modele }}</p>
-                    <ul>
-                        <li>Nombre de places : {{ vehicule.nombrePlace }}</li>
-                        <li>Couleur : {{ vehicule.couleur }} </li>
-                        <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
-                    </ul>
+    <main class="main-vehicules principal-main-vehicules">
+        <div class="" >
+             <div class="">
+
+                <div class="zone-vehicules">   
+                {% for vehicule in vehicules %}
+                    <div class="row agencement-vehicules">
+                        <div class="alpha  ">
+                            
+                                <div class="image-vehicules">
+                                    <img src="{{ asset('img/vehicule/' ~ vehicule.img1) }}" alt="photo principale {{ vehicule.marque }}" class="taille-image">
+                                </div>
+                                <div class="text-vehicules">
+                                    <h2 class="premier-titre-vehicules">{{ vehicule.marque }}</h2>
+                                    <p  class="deuxieme-titre-vehicules" >{{ vehicule.modele }}</p>
+                                    <ul>
+                                        <li>Nombre de places : {{ vehicule.nombrePlace }}</li>
+                                        <li>Couleur : {{ vehicule.couleur }} </li>
+                                        <li>Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
+                                    </ul>
+                                </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="{{ path('vehicule', {'id':vehicule.id}) }}" class="btn btn-outline-secondary">Voir plus</a>
                 </div>
+            {% endfor %}
             </div>
-            <div class="card-body text-center">
-                <a href="{{ path('vehicule', {'id':vehicule.id}) }}" class="btn btn-outline-secondary">Voir plus</a>
-            </div>
-        {% endfor %}
-        
-        <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
+            
+            <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
+        </div>
     </main>
 
 {% endblock %}
