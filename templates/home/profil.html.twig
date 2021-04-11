@@ -9,8 +9,8 @@
     <main class="container-fluid pl-5 mt-5">
         <h3> Informations personnelles</h3>
         {% if user.id is same as app.user.id %}
-            <table class="table table-bordered table-dark text-center table-hover table-sm">
-                <thead>
+            <table class="table table-bordered text-center table-hover table-sm">
+                <thead class="thead-light">
                     <tr>
                         <th>Email</th>
                         {# <th>Mot de passe</th> #}
@@ -53,5 +53,8 @@
         {% else %}
             <p>Vous n'avez pas les droits pour accéder à cette page</p>
         {% endif %}
+
+        <a href="{{ path('home') }}" type="button" class="btn btn-info" style="float:right">Retour à la page d'accueil</a>
+
     </main>
 {% endblock %}

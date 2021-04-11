@@ -25,17 +25,17 @@ class UserType extends AbstractType
                     'placeholder' => 'prenom.nom@domaine.com'
                 ]
             ])
-            ->add('roles', ChoiceType::class, [
-                'required' => false,
-                'multiple' => true,
-                'expanded' =>true,
-                'choices' => [
-                    'super admin' => 'ROLE_SUPER_ADMIN',
-                    'administrateur' => 'ROLE_ADMIN',
-                    'utilisateur' => 'ROLE_USER'
-                ]
-            ])
-            ->add('password')
+            // ->add('roles', ChoiceType::class, [
+            //     'required' => false,
+            //     'multiple' => true,
+            //     'expanded' =>true,
+            //     'choices' => [
+            //         // 'super admin' => 'ROLE_SUPER_ADMIN',
+            //         'Administrateur' => 'ROLE_ADMIN',
+            //         'Utilisateur' => 'ROLE_USER'
+            //     ]
+            // ])
+            // ->add('password')
             ->add('nom')
             ->add('prenom')
             ->add('tel')
