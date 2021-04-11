@@ -19,8 +19,8 @@
         </div>
     </div>
 
-    <table class="table table-bordered table-info text-center table-hover table-sm">
-        <thead>
+    <table class="table table-bordered text-center table-hover table-sm">
+        <thead class="thead-light">
             <tr>
                 <th>N°</th>
                 <th>Type de véhicule</th>
@@ -31,7 +31,7 @@
                 <th>Nombre de places</th>
                 <th>Couleur</th>
                 <th>Image 1</th>
-                <th>Image 2</th>
+                {# <th>Image 2</th> #}
                 <th>Prix</th>
                 <th>Disponibilité</th>
                 <th>Modifier ce véhicule</th>
@@ -50,7 +50,7 @@
                     <td class="align-middle">{{ vehicule.nombrePlace }}</td>
                     <td class="align-middle">{{ vehicule.couleur }}</td>
                     <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img1 }}" alt="photo principale vehicule {{ loop.index }}"></td>
-                    <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img2 }}" alt="photo secondaire vehicule {{ loop.index }}"></td>
+                    {# <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img2 }}" alt="photo secondaire vehicule {{ loop.index }}"></td> #}
                     <td class="align-middle">{{ vehicule.prix|number_format(0, ',', ' ') }} €</td>
                     <td class="align-middle">{{ vehicule.disponibilite }}</td>
                     <td class="align-middle">
