@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    <div class="container-fluid p-5 text-center bg-light">
+    <div class="container-fluid p-5 text-center" style="background-color: #01C5C4;">
         <h1>{{ vehicule.marque }} - {{ vehicule.modele }}</h1>
     </div>
 
@@ -20,7 +20,7 @@
                         <li class="list-group-item">Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
                         <li class="list-group-item">Disponibilité : {{ vehicule.disponibilite }}</li>
                         <li class="list-group-item">Nombre de places : {{ vehicule.nombrePlace }}</li>
-                        <li class="list-group-item">Immatriculation : {{ vehicule.immatriculation }}</li>
+                        {# <li class="list-group-item">Immatriculation : {{ vehicule.immatriculation }}</li> #}
                         <li class="list-group-item">Couleur : {{ vehicule.couleur }} </li>
                         <li class="list-group-item">carburant : {{ vehicule.carburant }}</li>
                     </ul>
@@ -34,12 +34,19 @@
             {% endif %}
         </div>
 
-        <div class="contact-vehicules">
-         <button type="button" class="btn btn-success">CONTACTER LE PROPRIETAIRE</button>
-            <p>Nom : {{ vehicule.user.nom }} </p>
-            <p>Numéro de téléphone : {{ vehicule.user.tel }} </p>
-            <p>Email : {{ vehicule.user.email }} </p>
-        </div>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <div class="contact-vehicules">
+                <button type="button" class="btn btn-success">CONTACTER LE PROPRIETAIRE</button>
+                <p>Nom : {{ vehicule.user.nom }} </p>
+                <p>Numéro de téléphone : {{ vehicule.user.tel }} </p>
+                <p>Email : {{ vehicule.user.email }} </p>
+            </div>
+        {% else %}
+            <div class="button-connection-proprio">
+                <a href="{{ path('app_login') }}" type="button" class="btn btn-success">Se connecter pour contacter le propriétaire</a>
+            </div>
+        {% endif %}
+
 
         <div class="text-right">
             <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
