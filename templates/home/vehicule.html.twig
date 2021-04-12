@@ -15,21 +15,21 @@
                 <div class="card-body">
                     <h2 class="py-3 card-title">{{ vehicule.marque }}</h2>
                     <p class="card-title">{{ vehicule.modele }}</p>
-                    <ul>
-                        <li class="card-text">Nombre de places : {{ vehicule.nombrePlace }}</li>
-                        <li class="card-text">Immatriculation : {{ vehicule.immatriculation }}</li>
-                        <li class="card-text">Couleur : {{ vehicule.couleur }} </li>
-                        <li class="card-text">carburant : {{ vehicule.carburant }}</li>
-                        <li class="card-text">Disponibilité : {{ vehicule.disponibilite }}</li>
-                        <li class="card-text">Type de véhicule : {{ vehicule.typeVehicule }}</li>
-                        <li class="card-text">Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
+                    <ul class="list-group list-group-flush"> 
+                        <li class="list-group-item">Type de véhicule : {{ vehicule.typeVehicule }}</li>
+                        <li class="list-group-item">Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
+                        <li class="list-group-item">Disponibilité : {{ vehicule.disponibilite }}</li>
+                        <li class="list-group-item">Nombre de places : {{ vehicule.nombrePlace }}</li>
+                        <li class="list-group-item">Immatriculation : {{ vehicule.immatriculation }}</li>
+                        <li class="list-group-item">Couleur : {{ vehicule.couleur }} </li>
+                        <li class="list-group-item">carburant : {{ vehicule.carburant }}</li>
                     </ul>
                 </div>
             </div>
             {% if vehicule.img2 is not null %}
                 <div class="col-8 offset-2">
-                    <h2 class="py-3">Autres photos</h2>
-                    <img src="{{ asset('img/vehicule/' ~ vehicule.img2) }}" alt="photo principale {{ vehicule.marque }}" class="w-50">
+                    <h2 class="py-3 card-title">Autres photos</h2>
+                    <img src="{{ asset('img/vehicule/' ~ vehicule.img2) }}" alt="photo principale {{ vehicule.marque }}" class="w-50 card-img-bottom">
                 </div>
             {% endif %}
         </div>

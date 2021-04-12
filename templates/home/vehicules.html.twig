@@ -20,8 +20,8 @@
                                     <h2 class="card-title">{{ vehicule.marque }}</h2>
                                     <p class="card-title">{{ vehicule.modele }}</p>
                                     <ul>
+                                        <li class="card-text">Type de véhicule : {{ vehicule.typeVehicule }}</li>
                                         <li class="card-text">Nombre de places : {{ vehicule.nombrePlace }}</li>
-                                        <li class="card-text">Couleur : {{ vehicule.couleur }} </li>
                                         <li class="card-text">Prix : {{ vehicule.prix|number_format(0, ',', ' ')}} €</li>
                                     </ul>
                                 </div>
