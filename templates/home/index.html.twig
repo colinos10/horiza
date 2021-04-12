@@ -4,10 +4,12 @@
 
 {% block body %}
     <main class"container-fluid bg-info">
-        <div class="image">
+        <div class="image d-flex" style="justify-content:center;">
 
-            {# PREMIERE CARD SUR PAGE D'ACCUEIL #}
-            <div class="d-flex justify-content-around">
+            
+            <div class="home-cards d-flex">
+
+                {# PREMIERE CARD SUR PAGE D'ACCUEIL #}
                 <div class="card" style="width: 18rem;padding-top: 0px;">
                     {# <img class="card-img-top" src="..." alt="Card image cap"> #}
                     <div class="card-body">
@@ -18,7 +20,6 @@
                 </div>
 
                 {# DEUXIEME CARD SUR PAGE D'ACCUEIL #}
-
                 <div class="card" style="width: 18rem;">
                     {# <img class="card-img-top" src="..." alt="Card image cap"> #}
                     <div class="card-body ">
@@ -28,6 +29,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-6 offset-3">
                     {% for label, messages in app.flashes %}
@@ -37,6 +39,7 @@
                     {% endfor %}
                 </div>
             </div>
+
         </div>
 
     </main>
