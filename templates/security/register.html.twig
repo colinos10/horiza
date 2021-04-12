@@ -18,7 +18,11 @@
             <p style="text-align:center">Rejoignez une grande communauté partout en France en 1 clic</p>
         </div>
 
+<<<<<<< HEAD
         <form method="post">
+=======
+        <form method="post" class="col-10 offset-3">
+>>>>>>> a05871e64b106796113bd6f9a25573e89f7287e5
         {{ form_start(registrationForm) }}
             <div>
                 {{ form_row(registrationForm.civilite) }}
@@ -57,7 +61,8 @@
                 <a href="cgu">{{ form_row(registrationForm.agreeTerms) }}</a>
             </div>
             <div class="my-3 largeur-form">
-                <button type="submit" class="btn btn-success my-3 submit-register">Je valide mon inscription !</button>
+            <button type="submit" class="btn btn-dark text-dark font-weight-bold my-3 submit-register" style="background-color: #B8DE6F">Je valide mon inscription !</button>
+            {{ form_end(registrationForm) }}
             </div> 
         {{ form_end(registrationForm) }}
                 <a href="{{ path('home') }}" class="btn btn-danger">Annuler</a>
