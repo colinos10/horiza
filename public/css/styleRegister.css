@@ -97,3 +97,22 @@
     
   }
   }
+
+
+
+
+  /******************************************** LOGIN **************************************** */
+
+.containeur-main-login{
+  min-height: 34em;
+}
+
+.input-login{
+  width: 12em;
+}
+
+.form-login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

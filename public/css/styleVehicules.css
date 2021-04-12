@@ -42,3 +42,10 @@
     font-weight: bold;
     font-size: 17px;
 }
+
+.button-connection-proprio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
