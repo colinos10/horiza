@@ -7,9 +7,13 @@
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
+
+    <div class="container-fluid text-center bg-info pt-5 pb-5">
+        <h1>Inscription</h1>
+    </div>
+
  <main class="container-fluid p-5 main-inscription">
     <div class="col-5 offset-3 principal-register">
-        <h1 class="col-5 offset-3 my-3 inscription">Inscription</h1>
         <div class="my-3 text-p-main">
         <p style="text-align:center">Rejoignez une grande communauté partout en France en 1 clic</p>
         </div>
@@ -57,6 +61,8 @@
             <button type="submit" class="btn btn-success my-3 submit-register">Je valide mon inscription !</button>
             {{ form_end(registrationForm) }}
             </div> 
+            <a href="{{ path('home') }}" class="btn btn-danger">Annuler</a>
+
         </form>
     </div>
 </main>
