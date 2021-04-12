@@ -15,54 +15,52 @@
  <main class="container-fluid p-5 main-inscription">
     <div class="col-5 offset-3 principal-register">
         <div class="my-3 text-p-main">
-        <p style="text-align:center">Rejoignez une grande communauté partout en France en 1 clic</p>
+            <p style="text-align:center">Rejoignez une grande communauté partout en France en 1 clic</p>
         </div>
 
-        <form method="post" class="col-5 offset-3">
+        <form method="post">
         {{ form_start(registrationForm) }}
-            <div class="my-3 largeur-form">
+            <div>
                 {{ form_row(registrationForm.civilite) }}
             </div>
-            <div class="my-3 largeur-form ">
+            <div>
                 {{ form_row(registrationForm.prenom) }}
             </div>
-            <div class="my-3 largeur-form">
+            <div>
                 {{ form_row(registrationForm.nom) }}
             </div>
-            <div class="my-3 largeur-form naissance">
+            <div>
                 {{ form_row(registrationForm.date_naissance) }}
             </div>   
-            <div class="my-3 largeur-form">
+            <div>
                 {{ form_row(registrationForm.email) }}
             </div>
-            <div class="my-3 largeur-form">
+            <div>
                 {{ form_row(registrationForm.plainPassword) }}
             </div>
-            <div class="my-3 largeur-form">
+            <div>
                 {{ form_row(registrationForm.tel) }}
             </div>
-            <div class="my-3 image-formulaire-register  largeur-form">
+            <div>
                 {{ form_row(registrationForm.img1) }}
             </div>
-            <div class="my-3 largeur-form">
+            <div>
                 {{ form_row(registrationForm.adresse) }}
             </div>
-            <div class="my-3 largeur-form">
+            <div>
                 {{ form_row(registrationForm.code_postal) }}
             </div>
-            <div class="my-3 largeur-form">
+            <div>
                 {{ form_row(registrationForm.ville) }}
             </div>
-            <div class="my-3 largeur-form  validation-terme">
+            <div>
                 <a href="cgu">{{ form_row(registrationForm.agreeTerms) }}</a>
             </div>
-            <p style="text-align: center;">Tous les champs doivent être remplis</p>
             <div class="my-3 largeur-form">
-            <button type="submit" class="btn btn-success my-3 submit-register">Je valide mon inscription !</button>
-            {{ form_end(registrationForm) }}
+                <button type="submit" class="btn btn-success my-3 submit-register">Je valide mon inscription !</button>
             </div> 
-            <a href="{{ path('home') }}" class="btn btn-danger">Annuler</a>
-
+        {{ form_end(registrationForm) }}
+                <a href="{{ path('home') }}" class="btn btn-danger">Annuler</a>
         </form>
     </div>
 </main>

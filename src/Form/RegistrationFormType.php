@@ -29,6 +29,7 @@ class RegistrationFormType extends AbstractType
             ->add('nom', TextType::class)
             ->add('date_naissance', DateType::class, [
                 'widget' => 'choice',
+                'label' => 'Date de naissance',
                 'years' => range(1970, 2021)
             ])
             ->add('email', EmailType::class, [
@@ -36,9 +37,12 @@ class RegistrationFormType extends AbstractType
                     'placeholder' => 'Ex.: prenom.nom@domaine.com'
                 ]
             ])
-            ->add('tel', TextType::class)
+            ->add('tel', TextType::class, [
+                'label' => 'Téléphone',
+            ])
             ->add('img1', FileType::class, [
                 'required' => false,
+                'label' => 'Photo de profil',
                 'help' => 'png, jpeg, pdf - 2 Mo maximum',
                 'constraints' => [
                     new File([

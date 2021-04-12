@@ -11,9 +11,9 @@ use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class VehiculeType extends AbstractType
 {
@@ -109,12 +109,14 @@ class VehiculeType extends AbstractType
                     'max' => 250
                 ]
             ])
-            ->add('disponibilite', CheckboxType::class,[
+            ->add('disponibilite', ChoiceType::class,[
                 'required' => true,
-                'label' => 'Disponibilité',
-                'attr' => [
-                    'placeholder' => '',
-                ]
+                'label' => 'Disponible',
+                'choices' => [
+                    'Oui' => true,
+                    'Non' => false
+                ],
+                'expanded' => true
             ])
             ->add('type_vehicule', TextType::class, [
                 'required' => true,
