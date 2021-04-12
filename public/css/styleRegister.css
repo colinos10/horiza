@@ -63,12 +63,7 @@
 }
 }
 
-
-
 /* ***** permettent de faire du responsive ****** */
-
-
-
 @media (min-width: 500px) {
 .principal-register{
     padding: 100px 15px;

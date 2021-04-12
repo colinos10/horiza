@@ -27,18 +27,50 @@
 
     <header>
         <div class="pos-f-t">
-            <nav class="navbar navbar-expand-md navbar-dark bg-white">
+            <nav class="navbar navbar-expand-md navbar-dark">
                     <a href="{{ path('home') }}" class="liens-a"><img src="https://cdn.discordapp.com/attachments/811996014566572055/827465660284010516/horiza-logo-2.png" alt="Logo" class="logo"/></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 <div class="collapse navbar-collapse justify-content-between" id="nav">
-                        <ul class="navbar-bar" style="display: contents">
+                        <ul class="navbar-bar text-decoration-none" style="display: contents">
                             <li class="nav-item">
+<<<<<<< HEAD
+                                <a href="vehicules" class="nav-link text-dark a-menu mr-3"><i class="fas fa-handshake"></i> Louer un véhicule</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="annonce/create" class="nav-link text-dark a-menu mr-3"><i class="fas fa-pen-alt"></i> Déposer une annonce</a>
+                            </li>
+                            <li class="nav-item">
+                                {% if app.user %}
+                                <a href="annonce" class="nav-link text-dark a-menu mr-3"><i class="fas fa-list"></i> Gérer mes annonces</a>
+                                {% endif %}
+                            </li>
+                            <li class="nav-item">
+                                {% if app.user == null %}
+                                <a href="register" class="nav-link text-dark a-menu mr-3"><i class="fas fa-user-plus"></i> S'inscrire</a>
+                                {% endif %}
+                            </li>
+                            <li class="nav-item">
+                                {% if app.user == null %}
+                                <a href="login" class="nav-link text-dark a-menu mr-3"><i class="fas fa-sign-in-alt"></i> Se connecter</a>
+                                {% endif %}
+                            </li>
+                            <li class="nav-item">
+                                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id != null %}
+                                <a href="{{ path('profil', {'id':app.user.id}) }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-user"></i> Mon compte</a>
+                                {% endif %}
+                            </li>
+                            <li class="nav-item">
+                                {% if app.user %}
+                                <a href="{{ path('app_logout') }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-sign-out-alt"></i> Se déconnecter</a>
+                                {% endif %}
+=======
                                 <a href="{{ path('vehicules') }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-handshake">Louer un véhicule</a></i>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ path('annonce_create') }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-pen-alt"> Déposer une annonce</a></i>
+>>>>>>> a008a2e0d5a71768a4b2dfd5eb05820c98834f33
                             </li>
                             {% if app.user %}
                                 <li class="nav-item">
@@ -78,20 +110,26 @@
 
         {% block javascripts %}{% endblock %}
 
-        <footer class="bg-dark footer-bottom w-100">
+    <footer class="footer-bottom w-100" style="background-color: #01C5C4;">
+
         <div class="mpca">
             <a href="mentions"><p class="text-white ml-2">Mentions Légales</p></a>
             <a href="politique"><p class="text-white ml-2">Politique de confidentialité</p></a>
             <a href="cgu"><p class="text-white ml-2">CGU - CGV</p></a>
             <a href="about"><p class="text-white ml-2">À propos de nous</p></a>
         </div>
+
+        <div>
             <p class="text-white" style="margin-left: 29rem;margin-top: 7rem;">© 2021 Copyright Horiza</p>
+        </div>
+
         <div class="contact">
             <a href="contact"><p class="text-white ml-2">Contactez-nous</p></a>
             <a href="https://twitter.com/" class="reseaux" target="_blank"><i class="fab fa-twitter text-white"></i></a>
             <a href="https://instagram.com/" class="reseaux" target="_blank"><i class="fab fa-instagram text-white"></i></a>
             <a href="https://facebook.com/" class="reseaux" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
-        </div>
-            
+        </div> 
+
     </footer>
+
 </html>
