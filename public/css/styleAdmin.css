@@ -18,6 +18,11 @@
     font-weight: lighter;
 }
 
+.conteneur{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* ******************** NAV ******************** */
 
 nav {

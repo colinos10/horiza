@@ -30,13 +30,11 @@
             <div class="row">
                 <nav class="col-1" style="background-color: #B8DE6F;">
                     <ul>
-                        <a href="{{ path('admin') }}" title="accueil administrateur"><li><i class="fas fa-laptop"></i></li></a>
-                        <a href="{{ path('admin_vehicules') }}" title="vehicules"><li><i class="fas fa-shuttle-van"></i></li></a>
-                        {% if is_granted('ROLE_SUPER_ADMIN') %}
+                            <a href="{{ path('admin') }}" title="accueil administrateur"><li><i class="fas fa-laptop"></i></li></a>
+                            <a href="{{ path('admin_vehicules') }}" title="vehicules"><li><i class="fas fa-shuttle-van"></i></li></a>
                             <a href="{{ path('admin_users') }}" title="utilisateurs"><li><i class="fas fa-users"></i></li></a>
-                        {% endif %}
-                        <a href="{{ path('app_login') }}" title="déconnexion"><li><i class="fas fa-user-times"></i></li></a>
-                        <a href="{{ path('home') }}" title="accueil du site"><li><i class="fas fa-door-open"></i></li></a>
+                            <a href="{{ path('app_login') }}" title="déconnexion"><li><i class="fas fa-user-times"></i></li></a>
+                            <a href="{{ path('home') }}" title="accueil du site"><li><i class="fas fa-door-open"></i></li></a>
                     </ul>
                 </nav>
                 <div class="col-11 p-5">
