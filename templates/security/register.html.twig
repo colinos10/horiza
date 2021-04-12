@@ -14,7 +14,7 @@
         <p style="text-align:center">Rejoignez une grande communauté partout en France en 1 clic</p>
         </div>
 
-        <form method="post" class="col-5 offset-3">
+        <form method="post" class="col-10 offset-3">
         {{ form_start(registrationForm) }}
             <div class="my-3 largeur-form">
                 {{ form_row(registrationForm.civilite) }}
@@ -54,7 +54,7 @@
             </div>
             <p style="text-align: center;">Tous les champs doivent être remplis</p>
             <div class="my-3 largeur-form">
-            <button type="submit" class="btn btn-success my-3 submit-register">Je valide mon inscription !</button>
+            <button type="submit" class="btn btn-dark text-dark font-weight-bold my-3 submit-register" style="background-color: #B8DE6F">Je valide mon inscription !</button>
             {{ form_end(registrationForm) }}
             </div> 
         </form>
