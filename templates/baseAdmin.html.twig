@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="{{ asset('css/styleAdmin.css') }}">
+        <link rel="icon" type="img/png" href="{{ asset('img/logo.png') }}" />
 
         {% block stylesheets %}{% endblock %}
 
@@ -21,13 +22,13 @@
 
     <body>
 
-        <header class="container-fluid bg-dark text-center text-light p-3">
+        <header class="container-fluid text-center text-light p-3" style="background-color: #01C5C4;">
             <h2>Horiza - Espace Administrateur</h2>
         </header>
 
         <main class="container-fluid">
             <div class="row">
-                <nav class="col-1 bg-secondary">
+                <nav class="col-1" style="background-color: #B8DE6F;">
                     <ul>
                         <a href="{{ path('admin') }}" title="accueil administrateur"><li><i class="fas fa-laptop"></i></li></a>
                         <a href="{{ path('admin_vehicules') }}" title="vehicules"><li><i class="fas fa-shuttle-van"></i></li></a>
@@ -49,7 +50,7 @@
             </div>
         </main>
 
-        <footer class="container-fluid bg-dark text-light text-center">
+        <footer class="container-fluid text-light text-center">
             {# <p>{{ copyright }}</p> #}
         </footer>
 
