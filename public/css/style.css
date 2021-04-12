@@ -1,8 +1,8 @@
 @font-face {
   font-family: CaviarDreams;
-  src: url(CaviarDreams.ttf),
-       url(CaviarDreams_Bold.ttf);
-}
+  src: url("../polices/CaviarDreams.ttf"),
+        url("../polices/CaviarDreams_Bold.ttf");
+} 
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
