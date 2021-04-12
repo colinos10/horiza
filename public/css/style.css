@@ -110,6 +110,12 @@ header {
 
 /* ************************************* MAIN ****************************** */
 
+.home-cards {
+  width: 100%;
+  justify-content: space-around; 
+  align-items: center;
+}
+
 /* l'image en fond sur le main  */
 .image{
   background-image: url(https://media.discordapp.net/attachments/430039498470981644/829329520057778196/image_de_fond.png_reverse.png);
@@ -197,4 +203,8 @@ header {
 
 .reseaux {
   text-align: center;
+}
+
+footer a {
+  text-decoration: none;
 }
