@@ -35,36 +35,30 @@
                 <div class="collapse navbar-collapse justify-content-between" id="nav">
                         <ul class="navbar-bar" style="display: contents">
                             <li class="nav-item">
-                                <a href="vehicules" class="nav-link text-dark a-menu mr-3"><i class="fas fa-handshake">Louer un véhicule</a></i>
+                                <a href="{{ path('vehicules') }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-handshake">Louer un véhicule</a></i>
                             </li>
                             <li class="nav-item">
-                                <a href="annonce/create" class="nav-link text-dark a-menu mr-3"><i class="fas fa-pen-alt"> Déposer une annonce</a></i>
+                                <a href="{{ path('annonce_create') }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-pen-alt"> Déposer une annonce</a></i>
                             </li>
-                            <li class="nav-item">
-                                {% if app.user %}
-                                <a href="annonce" class="nav-link text-dark a-menu mr-3"><i class="fas fa-list"> Gérer mes annonces</a></i>
-                                {% endif %}
-                            </li>
-                            <li class="nav-item">
-                                {% if app.user == null %}
-                                <a href="register" class="nav-link text-dark a-menu mr-3">S'inscrire</a>
-                                {% endif %}
-                            </li>
-                            <li class="nav-item">
-                                {% if app.user == null %}
-                                <a href="login" class="nav-link text-dark a-menu mr-3">Se connecter</a>
-                                {% endif %}
-                            </li>
-                            <li class="nav-item">
-                                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id != null %}
-                                <a href="{{ path('profil', {'id':app.user.id}) }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-user"> Mon compte</a></i>
-                                {% endif %}
-                            </li>
-                            <li class="nav-item">
-                                {% if app.user %}
-                                <a href="{{ path('app_logout') }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-sign-out-alt"> Se déconnecter</a></i>
-                                {% endif %}
-                            </li>
+                            {% if app.user %}
+                                <li class="nav-item">
+                                    <a href="{{ path('annonce') }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-list"> Gérer mes annonces</a></i>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ path('profil', {'id':app.user.id}) }}" class="nav-link text-dark a-menu mr-3"><i class="fas fa-user"> Mon compte</a></i>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ path('app_logout') }}" class="nav-link text-dark a-menu mr-3">Se déconnecter</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a href="{{ path('app_register') }}" class="nav-link text-dark a-menu mr-3">S'inscrire</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ path('app_login') }}" class="nav-link text-dark a-menu mr-3">Se connecter</a>
+                                </li>
+                            {% endif %}
+
                         </ul>    
                     </div>
             </nav>
