@@ -37,6 +37,18 @@ header {
   position: fixed;
 } */
 
+#nav a{
+  color: black;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+#nav a:hover{ 
+  background-color: rgba(243, 146, 51, 0.7);
+  color: white;
+  
+}
+
 
 
 /* ******************* LOGO ************************ */
@@ -73,11 +85,12 @@ header {
 }
 
 
-@media screen and (min-width: 768px){
+
+
+@media screen and (max-width: 768px){
   .navbar-bar{
     display: flex;
   }
-
 }
 
 .navbar-bar{
@@ -153,7 +166,7 @@ header {
   text-align: center;
 }
 
-/* le nom bootstrap pourri du formulaire */
+/* le nom bootstrap du formulaire */
 .ml-3{
   margin-left: 0em !important;
 }
@@ -185,15 +198,6 @@ header {
   font-size: 1.2em;
   background-color: #F39233;
   border-radius: 4px;
-}
-
-
-.minimal{
-  min-height: 30em;
-}
-
-.minimal-about{
-  min-height: 42em;
 }
 
 /* ************************************* FOOTER ****************************** */
