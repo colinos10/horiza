@@ -8,11 +8,11 @@
         <h2>Connexion</h2>
     </div>
 
-    <main class="container-fluid p-5">
+    <main class="container-fluid p-5 containeur-main-login">
 
         {# <h1 class="col-12 text-center my-3">Connexion</h1> #}
 
-        <form method="post" class="col-4 offset-4">
+        <form method="post" class="col-4 offset-4 form-login">
 
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -24,12 +24,12 @@
                 </div>
             {% endif %} #}
 
-            <div>
+            <div class="input-login">
                 <label for="inputEmail">Email</label>
                 <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
             </div>
 
-            <div class="my-2">
+            <div class="my-2 input-login">
                 <label for="inputPassword">Password</label>
                 <input type="password" name="password" id="inputPassword" class="form-control" required>
             </div>
