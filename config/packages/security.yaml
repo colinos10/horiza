@@ -38,4 +38,4 @@ security:
         - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/annonce/create, roles: ROLE_USER }
-        - { path: ^/vehicule, roles: ROLE_USER }
+        # - { path: ^/vehicule, roles: ROLE_USER }

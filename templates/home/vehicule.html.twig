@@ -34,12 +34,17 @@
             {% endif %}
         </div>
 
-        <div class="contact-vehicules">
-         <button type="button" class="btn btn-success">CONTACTER LE PROPRIETAIRE</button>
-            <p>Nom : {{ vehicule.user.nom }} </p>
-            <p>Numéro de téléphone : {{ vehicule.user.tel }} </p>
-            <p>Email : {{ vehicule.user.email }} </p>
-        </div>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <div class="contact-vehicules">
+                <button type="button" class="btn btn-success">CONTACTER LE PROPRIETAIRE</button>
+                <p>Nom : {{ vehicule.user.nom }} </p>
+                <p>Numéro de téléphone : {{ vehicule.user.tel }} </p>
+                <p>Email : {{ vehicule.user.email }} </p>
+            </div>
+        {% else %}
+            <a href="{{ path('app_login') }}" type="button" class="btn btn-success">Se connecter pour contacter le propriétaire</a>
+        {% endif %}
+
 
         <div class="text-right">
             <a href="{{ path('home') }}" type="button" class="btn btn-info">Retour à la page d'accueil</a>
