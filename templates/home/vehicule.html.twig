@@ -4,9 +4,9 @@
 
 {% block body %}
 
-    <header class="container-fluid p-5 text-center bg-light">
+    <div class="container-fluid p-5 text-center bg-light">
         <h1>{{ vehicule.marque }} - {{ vehicule.modele }}</h1>
-    </header>
+    </div>
 
     <main class="container-fluid ">
         <div class="row p-5 card mb-3">
@@ -36,9 +36,9 @@
 
         <div>
             <p>CONTACTER LE PROPRIETAIRE</p>
-            <p>Nom : </p>
-            <p>Numéro de téléphone : </p>
-            <p>Email : </p>
+            <p>Nom : {{ vehicule.user.nom }} </p>
+            <p>Numéro de téléphone : {{ vehicule.user.tel }} </p>
+            <p>Email : {{ vehicule.user.email }} </p>
         </div>
 
         <div class="text-right">

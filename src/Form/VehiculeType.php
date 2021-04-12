@@ -29,7 +29,7 @@ class VehiculeType extends AbstractType
             ])
             ->add('modele', TextType::class, [
                 'required' => true,
-                'label' => 'Modele',
+                'label' => 'Modèle',
                 'attr' => [
                     'placeholder' => ''
                 ]
