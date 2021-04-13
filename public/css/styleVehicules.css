@@ -59,5 +59,16 @@
     width: 100%;
 }
 
+.conteneurBouton{
+    display:flex; 
+    justify-content:flex-end;
+}
+
+.boutonRetour{
+    color: #F39233; 
+    position: fixed;
+    bottom: 150px;
+    right: 50px;
+}
 
 
