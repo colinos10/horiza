@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}erreur 500{% endblock %}
+
+{% block body %}
+
+    <div class="containerGlobalBody">
+        <div class="erreur">
+            <img src="{{ asset('img/error_500.png') }}" alt="error_500">
+            {# <a href="{{ path('home') }}" class="btn_valider">retourner à l'accueil</a> #}
+            <a class="btn_valider"; href="{{ path('home') }}">retourner à l'accueil</a>
+        </div>
+    </div>
+
+{% endblock %}

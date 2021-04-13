@@ -235,3 +235,16 @@ a:link {
 .minimal-about{
   min-height: 42em;
 }
+
+.erreur {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.erreur img {
+  width: 400px;
+}
