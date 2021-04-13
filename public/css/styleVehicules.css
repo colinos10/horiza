@@ -7,9 +7,9 @@
 
 @media (min-width: 800px) and (max-width: 1400px ){
     .main-vehicules {
-        max-width: 50.333333%;
-        margin-left: 19em;
-    }
+            max-width: 50.333333%;
+            margin-left: 19em;
+        }
     }
 
     @media (min-width: 500px) and (max-width: 800px ){
@@ -22,7 +22,7 @@
     @media (min-width: 300px) and (max-width: 500px ){
         .main-vehicules {
             max-width: 77.333333%;
-    margin-left: 4em;
+            margin-left: 4em;
     }
 }
 
