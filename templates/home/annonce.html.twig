@@ -11,8 +11,8 @@
         <h1>Gérer mes annonces</h1>
     </div>
 
-    <div class="row">
-        <div class="col-6 offset-3">
+    <div>
+        <div class="-6 offset-3">
             {% for label, messages in app.flashes %}
                 {% for message in messages %}
                     <div class="flash-{{ label }} bg-{{ label }} text-light p-3 mb-5 rounded">{{ message }}</div>
@@ -22,17 +22,17 @@
     </div>
 
     <table class="table table-bordered text-center table-hover table-sm">
-        <thead class="thead-light">
-            <tr>
-                <th>N°</th>
-                <th>Type de véhicule</th>
-                <th>Marque</th>
-                <th>Modèle</th>
-                <th>Immatriculation</th>
-                <th>Carburant</th>
-                <th>Nombre de places</th>
-                <th>Couleur</th>
-                <th>Image 1</th>
+        <thead class="thead-light ">
+            <tr class="">
+                <th >N°</th>
+                <th >Type de véhicule</th>
+                <th >Marque</th>
+                <th >Modèle</th>
+                <th >Immatriculation</th>
+                <th >Carburant</th>
+                <th >Nombre de places</th>
+                <th >Couleur</th>
+                <th >Image 1</th>
                 {# <th>Image 2</th> #}
                 <th>Prix</th>
                 <th>Disponibilité</th>
@@ -40,21 +40,21 @@
                 <th>Supprimer ce véhicule</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="">
             {% for vehicule in vehicules|reverse %}
-                <tr>
+                <tr class="">
                     <td class="align-middle">{{ loop.revindex }}</td>
-                    <td class="align-middle">{{ vehicule.typeVehicule }}</td>
-                    <td class="align-middle">{{ vehicule.marque }}</td>
-                    <td class="align-middle">{{ vehicule.modele }}</td>
-                    <td class="align-middle">{{ vehicule.immatriculation }}</td>
-                    <td class="align-middle">{{ vehicule.carburant }}</td>
-                    <td class="align-middle">{{ vehicule.nombrePlace }}</td>
-                    <td class="align-middle">{{ vehicule.couleur }}</td>
-                    <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img1 }}" alt="photo principale vehicule {{ loop.index }}"></td>
+                    <td class="align-middle ">{{ vehicule.typeVehicule }}</td>
+                    <td class="align-middle  ">{{ vehicule.marque }}</td>
+                    <td class="align-middle ">{{ vehicule.modele }}</td>
+                    <td class="align-middle  ">{{ vehicule.immatriculation }}</td> 
+                    <td class="align-middle ">{{ vehicule.carburant }}</td>
+                    <td class="align-middle ">{{ vehicule.nombrePlace }}</td>
+                    <td class="align-middle ">{{ vehicule.couleur }}</td>
+                    <td class="align-middle "><img src="{{ asset('img/vehicule/') ~ vehicule.img1 }}" alt="photo principale vehicule {{ loop.index }}" class="image-annonce"></td>
                     {# <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img2 }}" alt="photo secondaire vehicule {{ loop.index }}"></td> #}
-                    <td class="align-middle">{{ vehicule.prix|number_format(0, ',', ' ') }} €</td>
-                    <td class="align-middle">{{ vehicule.disponibilite }}</td>
+                    <td class="align-middle ">{{ vehicule.prix|number_format(0, ',', ' ') }} €</td>
+                    <td class="align-middle ">{{ vehicule.disponibilite }}</td>
                     <td class="align-middle">
                         <a href="{{ path('annonce_update', {'id':vehicule.id}) }}"><i class="fas fa-pen-square"></i></a>
                     </td>

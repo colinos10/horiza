@@ -209,3 +209,12 @@ header {
 a:link { 
  text-decoration:none; 
 } 
+
+.minimal{
+  min-height: 31em;
+}
+
+
+.minimal-about{
+  min-height: 42em;
+}
