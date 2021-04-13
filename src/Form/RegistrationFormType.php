@@ -38,7 +38,7 @@ class RegistrationFormType extends AbstractType
                 ]
             ])
             ->add('tel', TextType::class, [
-                'label' => 'Téléphone',
+                'label' => 'Tél',
             ])
             ->add('img1', FileType::class, [
                 'required' => false,
