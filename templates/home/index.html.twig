@@ -9,9 +9,9 @@
             <div class="home-cards d-flex">
 
                 {# PREMIERE CARD SUR PAGE D'ACCUEIL #}
-                <div class="card bg-transparent" style="width: 18rem;padding-top: 0px;">
+                <div class="col-xs-6 col-sm-3">
                     {# <img class="card-img-top" src="..." alt="Card image cap"> #}
-                    <div class="card-body border-right-0 border-dark rounded" style="background-color: rgba(241, 225, 137, 0.7);">
+                    <div class="card-body rounded" style="background-color: rgba(241, 225, 137, 0.7);">
                         <h5 class="card-title text-center">Je souhaite louer un camping-car !</h5>
                         {# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> #}
                         <a href="{{ path('vehicules') }}" class="btn" style="background-color: #F1E189;">Trouver le camping-car de mes rêves</a>
@@ -19,9 +19,9 @@
                 </div>
 
                 {# DEUXIEME CARD SUR PAGE D'ACCUEIL #}
-                <div class="card bg-transparent" style="width: 18rem;">
+                <div class="col-xs-6 col-sm-3">
                     {# <img class="card-img-top" src="..." alt="Card image cap"> #}
-                    <div class="card-body border-right-0 border-dark rounded" style="background-color: rgba(241, 225, 137, 0.7);">
+                    <div class="card-body rounded" style="background-color: rgba(241, 225, 137, 0.7);">
                         <h5 class="card-title text-center">Je souhaite déposer une annonce !</h5>
                         {# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> #}
                         <a href="{{ path('annonce_create') }}" class="btn" style="background-color: #F1E189;">Mettre mon camping-car en location</a>
