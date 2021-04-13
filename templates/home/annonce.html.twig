@@ -52,7 +52,7 @@
                     <td class="align-middle ">{{ vehicule.nombrePlace }}</td>
                     <td class="align-middle ">{{ vehicule.couleur }}</td>
                     <td class="align-middle "><img src="{{ asset('img/vehicule/') ~ vehicule.img1 }}" alt="photo principale vehicule {{ loop.index }}" class="image-annonce"></td>
-                    <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img2 }}" alt="photo secondaire vehicule {{ loop.index }}"></td>
+                    <td class="align-middle"><img src="{{ asset('img/vehicule/') ~ vehicule.img2 }}" alt="photo secondaire vehicule {{ loop.index }}" class="image-annonce" ></td>
                     <td class="align-middle ">{{ vehicule.prix|number_format(0, ',', ' ') }} €</td>
                     {# <td class="align-middle ">{{ vehicule.disponibilite }}</td> #}
                     <td class="align-middle">
