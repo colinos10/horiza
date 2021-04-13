@@ -66,7 +66,7 @@ class VehiculeType extends AbstractType
             ])
             ->add('img1', FileType::class, [
                 'required' => true,
-                'label' => 'Photo principale',
+                'label' => 'Photo n°1',
                 'mapped' => false,
                 'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
                 'constraints' => [
@@ -83,8 +83,8 @@ class VehiculeType extends AbstractType
                 ]
             ])
             ->add('img2', FileType::class, [
-                'required' => false,
-                'label' => 'Photo secondaire',
+                'required' => true,
+                'label' => 'Photo n°2',
                 'mapped' => false,
                 'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
                 'constraints' => [
@@ -109,15 +109,15 @@ class VehiculeType extends AbstractType
                     'max' => 250
                 ]
             ])
-            ->add('disponibilite', ChoiceType::class,[
-                'required' => true,
-                'label' => 'Disponible',
-                'choices' => [
-                    'Oui' => true,
-                    'Non' => false
-                ],
-                'expanded' => true
-            ])
+            // ->add('disponibilite', ChoiceType::class,[
+            //     'required' => true,
+            //     'label' => 'Disponible',
+            //     'choices' => [
+            //         'Oui' => true,
+            //         'Non' => false
+            //     ],
+            //     'expanded' => true
+            // ])
             ->add('type_vehicule', TextType::class, [
                 'required' => true,
                 'label' => 'Type de véhicule',
