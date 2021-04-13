@@ -29,11 +29,12 @@
                         <a href="{{ path('vehicule', {'id':vehicule.id}) }}" class="btn btn-outline-secondary">Voir plus</a>
                     </div>
                 {% endfor %}
-                <a href="{{ path('home') }}" class="mr-3" style="color: #F39233">Retour à la page d'accueil</a>
             </div>
-            
-
         </div>
+            <div class="conteneurBouton">
+                <a href="{{ path('home') }}" class="boutonRetour">Retour à la page d'accueil</a>
+            </div>
     </main>
+   
 
 {% endblock %}
