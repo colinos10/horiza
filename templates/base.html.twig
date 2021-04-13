@@ -84,25 +84,30 @@
         {% block javascripts %}{% endblock %}
 
     <footer class="footer-bottom w-100 text-decoration-none" style="background-color: #01C5C4;">
-
-        <div class="mpca">
-            <a href="{{ path('mentions') }}"><p class="text-white ml-2">Mentions Légales</p></a>
-            <a href="{{ path('politique') }}"><p class="text-white ml-2">Politique de confidentialité</p></a>
-            <a href="{{ path('cgu') }}"><p class="text-white ml-2">CGU - CGV</p></a>
-            <a href="{{ path('about') }}"><p class="text-white ml-2">À propos de nous</p></a>
+        <div class="container py-5">
+            <div class="row py-4">
+                <div class="col-xs-12 col-sm-6 col-lg-8"><img src="img/logo.png" alt="" width="180" class="mb-3">
+                    <p class="font-italic text-white font-weight-bold ">Horiza est un site de location de camping-car et de van entre particulier.</p>
+                    <ul class="list-inline mt-4 text-white">
+                        <li class="list-inline-item"><a href="https://twitter.com/" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://facebook.com/" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://instagram.com/" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-lg-4">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="{{ path('mentions') }}"><p class="text-white ml-2">Mentions Légales</p></a></li>
+                        <li class="mb-2"><a href="{{ path('politique') }}"><p class="text-white ml-2">Politique de confidentialité</p></a></li>
+                        <li class="mb-2"><a href="{{ path('cgu') }}"><p class="text-white ml-2">CGU - CGV</p></a></li>
+                        <li class="mb-2"><a href="{{ path('about') }}"><p class="text-white ml-2">À propos de nous</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="py-4">
+            <div class="container text-center">
+                <p class="text-white mb-0 py-2">© 2021 Copyright Horiza - All rights reserved.</p>
+            </div>
         </div>
-
-        <div>
-            <p class="text-white" style="margin-left: 29rem;margin-top: 7rem;">© 2021 Copyright Horiza</p>
-        </div>
-
-        <div class="contact">
-            <a href="contact"><p class="text-white ml-1">Contactez-nous</p></a>
-            <a href="https://twitter.com/" class="reseaux" target="_blank"><i class="fab fa-twitter text-white"></i></a>
-            <a href="https://instagram.com/" class="reseaux" target="_blank"><i class="fab fa-instagram text-white"></i></a>
-            <a href="https://facebook.com/" class="reseaux" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
-        </div> 
-
     </footer>
 
 </html>
