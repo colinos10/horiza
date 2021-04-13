@@ -11,11 +11,16 @@
 
 :root {
     --color-white: #FFFFFF;
-    --color-light-grey: #BBBBBB;
+    --color-light-grey: #F1E189;
 }
 
 * {
     font-weight: lighter;
+}
+
+.conteneur{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* ******************** NAV ******************** */
