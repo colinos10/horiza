@@ -11,7 +11,7 @@
         <h1>Gérer mes annonces</h1>
     </div>
 
-    <div>
+    <div >
         <div class="-6 offset-3">
             {% for label, messages in app.flashes %}
                 {% for message in messages %}
@@ -34,13 +34,13 @@
                 <th >Couleur</th>
                 <th >Image 1</th>
                 {# <th>Image 2</th> #}
-                <th>Prix</th>
-                <th>Disponibilité</th>
-                <th>Modifier ce véhicule</th>
-                <th>Supprimer ce véhicule</th>
+                <th >Prix</th>
+                <th >Disponibilité</th>
+                <th >Modifier ce véhicule</th>
+                <th >Supprimer ce véhicule</th>
             </tr>
         </thead>
-        <tbody class="">
+        <tbody class="  ">
             {% for vehicule in vehicules|reverse %}
                 <tr class="">
                     <td class="align-middle">{{ loop.revindex }}</td>

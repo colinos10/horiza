@@ -9,8 +9,8 @@
 
     <h1 class="pb-5">Liste des véhicules</h1>
 
-    <table class="table table-bordered table-dark text-center table-hover table-sm">
-        <thead>
+    <table class="table table-bordered text-center table-hover table-sm">
+        <thead class="thead-light">
             <tr>
                 <th>N°</th>
                 <th>Type de véhicule</th>
@@ -55,7 +55,7 @@
     </table>
     
     <div class="text-right my-5">
-        <a href="{{ path('admin_vehicules_create') }}" class="btn btn-outline-dark">Ajouter un véhicule</a>
+        <a href="{{ path('admin_vehicules_create') }}" class="btn" style="background-color: #F39233; color:white;">Ajouter un véhicule</a>
     </div>
 
 </div>
