@@ -53,7 +53,7 @@ header {
 
 /* ******************* LOGO ************************ */
 
-/* zone logo  pur*/
+zone logo  pur
 .logo {
   width: 7%;
 }
@@ -209,7 +209,6 @@ a:link {
 .minimal{
   min-height: 31em;
 }
-
 
 .minimal-about{
   min-height: 42em;
