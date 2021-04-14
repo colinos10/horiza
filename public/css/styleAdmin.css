@@ -23,6 +23,10 @@
     justify-content: space-evenly;
 }
 
+.col-1 {
+    flex: 0 0 20%;
+}
+
 /* ******************** NAV ******************** */
 
 nav {
