@@ -39,24 +39,24 @@ class UserType extends AbstractType
             ->add('nom')
             ->add('prenom')
             ->add('tel')
-            ->add('img1', FileType::class, [
-                'required' => false,
-                'label' => 'Photo principale',
-                'mapped' => false,
-                'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
-                'constraints' => [
-                    new Image([
-                        'maxSize' => '1024k',
-                        'mimeTypes' => [
-                            'image/png',
-                            'image/jpg',
-                            'image/jpeg',
-                            'image/jp2'
-                        ],
-                        'mimeTypesMessage' => 'Merci de sélectionner une image au format PNG, JPG, JPEG ou JP2'
-                    ])
-                ]
-            ])
+            // ->add('img1', FileType::class, [
+            //     'required' => false,
+            //     'label' => 'Photo principale',
+            //     'mapped' => false,
+            //     'help' => 'png, jpg, jpeg ou jp2 - 1 Mo maximum',
+            //     'constraints' => [
+            //         new Image([
+            //             'maxSize' => '1024k',
+            //             'mimeTypes' => [
+            //                 'image/png',
+            //                 'image/jpg',
+            //                 'image/jpeg',
+            //                 'image/jp2'
+            //             ],
+            //             'mimeTypesMessage' => 'Merci de sélectionner une image au format PNG, JPG, JPEG ou JP2'
+            //         ])
+            //     ]
+            // ])
             ->add('civilite')
             ->add('adresse')
             ->add('code_postal')
