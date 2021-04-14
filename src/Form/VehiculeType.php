@@ -109,15 +109,15 @@ class VehiculeType extends AbstractType
                     'max' => 250
                 ]
             ])
-            // ->add('disponibilite', ChoiceType::class,[
-            //     'required' => true,
-            //     'label' => 'Disponible',
-            //     'choices' => [
-            //         'Oui' => true,
-            //         'Non' => false
-            //     ],
-            //     'expanded' => true
-            // ])
+            ->add('disponibilite', ChoiceType::class,[
+                'required' => true,
+                'label' => 'Disponible',
+                'choices' => [
+                    'Oui' => true,
+                    'Non' => false
+                ],
+                'expanded' => true
+            ])
             ->add('type_vehicule', TextType::class, [
                 'required' => true,
                 'label' => 'Type de véhicule',
